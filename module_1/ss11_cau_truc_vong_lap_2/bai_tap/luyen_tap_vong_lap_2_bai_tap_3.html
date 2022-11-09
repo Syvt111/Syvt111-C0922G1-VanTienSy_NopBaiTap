@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    for (let i=1;i<6;i++){
+        for (let j=1;j<=i;j++){
+            document.write("*");
+        }document.write("<br>");
+    }
+    document.write("<br>");
+
+    for (let i=1;i<6;i++){
+        for (let j=6;j>i;j--){
+            document.write("*");
+        }document.write("<br>");
+    }
+    document.write("<br>");
+
+
+    for( row=1;row<6;row++){
+        for ( let i=1;i<(6-row);i++){
+            document.write("&nbsp&nbsp")
+        }
+        for (let j=1;j<=row;j++){
+            document.write("*")
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+
+
+    for( let row =5;row >0;row--){
+        for (let  i=1;i<=(5-row);i++){
+            document.write("&nbsp&nbsp")
+        }
+        for (let j=1;j<=row;j++){
+            document.write("*")
+        }
+
+
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Đảo ngược phần tử trong mảng</h1>
+<p>Nhập mảng số nguyên : </p>
+<input type="text"; id = "nhapSoNguyen">
+<button type="button" onclick="themSoNguyen()" value="Add">Add</button>
+<button type="button" onclick="daoNguoc()" >Đảo Ngược </button>
+<div id ="daysonhap" ></div> <br>
+<div id="result"></div>
+<script>
+    let a = 0;
+    let daySoNguyen=[];
+    function themSoNguyen() {
+        daySoNguyen[a]=parseFloat(document.getElementById("nhapSoNguyen").value);
+        a++;
+        document.getElementById("nhapSoNguyen").value = "";
+        let e = ""
+        for(let i=0;i<daySoNguyen.length;i++){
+            e += + daySoNguyen[i] + "; ";
+        }  document.getElementById("daysonhap").innerHTML= "  Dãy số ban đầu : [ " +e + " ]";
+    }
+    function daoNguoc() {
+        let daySoDao = daySoNguyen.slice().reverse();
+        let f = "";
+        for (let j =0;j< daySoDao.length; j++) {
+            f += + daySoDao[j] + "; ";
+        }
+        document.getElementById("result").innerHTML = "  Dãy số đảo ngược : [ " + f + " ]";
+    }
+
+
+</script>
+</body>
+</html>

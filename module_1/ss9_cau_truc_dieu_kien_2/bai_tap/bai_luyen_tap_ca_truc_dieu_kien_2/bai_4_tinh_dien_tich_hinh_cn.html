@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th colspan="3">
+            <button type="button" onclick="tinh()">Tính diện tích hình Chữ Nhật</button>
+        </th>
+    </tr>
+    <tr>
+        <th>Cạnh a (cm)</th>
+        <th>Cạnh b (cm)</th>
+        <th>Diện tích (cm2)</th>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="canha" placeholder="Nhập cạnh a"></td>
+        <td><input type="text" id="canhb" placeholder="Nhập cạnh b"></td>
+        <td><input type="text" id="dientich" placeholder="Diện tích"></td>
+
+    </tr>
+</table>
+<script>
+    function tinh() {
+        let a = parseInt(document.getElementById("canha").value);
+        let b = parseInt(document.getElementById("canhb").value);
+        let S = a * b;
+        if (a > 0 & b > 0) {
+            document.getElementById("dientich").value = +S;
+        } else {
+            document.getElementById("dientich").value = " Xin nhập lại cạnh a hoặc b !";
+        }
+
+    }
+</script>
+</body>
+</html>

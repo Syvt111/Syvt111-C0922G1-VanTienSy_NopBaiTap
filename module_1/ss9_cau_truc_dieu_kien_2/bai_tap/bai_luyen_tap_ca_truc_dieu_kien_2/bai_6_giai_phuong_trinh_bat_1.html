@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th colspan="3"> Giải phường trình A * X + B = 0</th>
+    </tr>
+    <tr>
+        <td>Nhập A : <input type="text" id="NguyenTuA"></td>
+        <td>Nhập B : <input type="text" id="NguyenTuB"></td>
+        <td><button type="button" onclick="layNghiem()">Nghiệm X</button>
+            <input type="text" id="nghiem"></td>
+    </tr>
+</table>
+<script>
+    function layNghiem() {
+        let A = parseInt(document.getElementById("NguyenTuA").value);
+        let B = parseInt(document.getElementById("NguyenTuB").value);
+        if (A==0&&B==0) {
+            document.getElementById("nghiem").value= "Vô nghiệm";
+        }else if (A==0) {
+            document.getElementById("nghiem").value= "Vô nghiệm";
+        }else {
+            document.getElementById("nghiem").value= +-B/A;
+        }
+
+    }
+</script>
+</body>
+</html>

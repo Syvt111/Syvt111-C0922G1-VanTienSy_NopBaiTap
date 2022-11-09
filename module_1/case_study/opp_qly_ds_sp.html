@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý danh sách sản phẩm</title>
+</head>
+<body>
+<h2 align="center">ACCOUNT MANAGE</h2>
+<p align="center" ><button type="submit" onclick="createAccount()" value="create"style="background: #0077aa">Create Account</button></p>
+<div id="result"></div>
+<script>
+    class BankAccount {
+        constructor(maTaiKhoan, tenTaiKhoan, tenNganHang, tongTienTaiKhoan) {
+            this.maTaiKhoan = maTaiKhoan;
+            this.tenTaiKhoan = tenTaiKhoan;
+            this.tenNganHang = tenNganHang;
+            this.tongTienTaiTaiKhoan = tongTienTaiKhoan;
+        }
+
+        getMaTaiKhoan() {
+            return this.maTaiKhoan  ;
+        }
+
+        getTenTaiKhoan() {
+            return this.tenTaiKhoan  ;
+        }
+
+        getTenNganHang() {
+            return this.tenNganHang  ;
+        }
+
+        getTongTienTaiKhoan() {
+            return this.tongTienTaiTaiKhoan;
+        }
+
+        setMaTaiKhoan(value) {
+             this.maTaiKhoan = value;
+        }
+
+        setTenTaiKhoan() {
+             this.tenTaiKhoan = value;
+        }
+
+        setTenNgangHang(value) {
+             this.tenNganHang=value;
+        }
+
+        setTongTienTaiKhoan(value) {
+             this.tongTienTaiTaiKhoan=value;
+        }
+
+    }
+
+    let syVT = new BankAccount("VST","Van Tien Sy","Agribank",10000000);
+    let tienP = new BankAccount("PT","Pham Tien","Vietcombank",15000000);
+    let array = [syVT,tienP];
+    let bang ;
+    function display(array){
+        bang = "<table border='1'width='700'style='font-size: 17px' align='center'>"+
+            "<tr style='background: #00aecd'>" +
+            "<th>Mã tài Khoản</th>"+
+            "<th>Tên chủ tài khoản</th>"+
+            "<th>Tên Ngân hàng</th>"+
+            "<th>Tổng tiền tài khoản</th>"+
+            "<th>Ghi chú</th>"+
+            "</tr>" ;
+        for (let i =0; i < array.length; i++){
+            bang += "<tr>"+
+                "<td>"+array[i].getMaTaiKhoan()+"</td>"+
+                "<td>"+array[i].getTenTaiKhoan()+"</td>"+
+                "<td>"+array[i].getTenNganHang()+"</td>"+
+                "<td >"+array[i].getTongTienTaiKhoan()+"</td>"+
+                "<td align='center'>"+
+                "<button type='button' onclick='add("+i+")'value='cập nhật'style='background: yellow'>Cập nhật</button>"+"&nbsp"+
+                "<button type='reset'onclick='del("+i+")'value='xóa'style='background: #d61b06'>Xóa</button>"+
+                "</td>"+
+                "</tr>";
+        }
+        bang += "</table>";
+        document.getElementById("result").innerHTML= bang;
+    }
+    display(array);
+    function createAccount() {
+        let maTaiKhoan = prompt("Nhập mã tài khoản ?");
+        let tenChuTaiKhoan = prompt("Nhập tên chủ tài khoản ?");
+        let tenNganHang = prompt("Nhập tên ngân hàng ?");
+        let tongSoTienTaiKhoan = +prompt("Nhập tổng số tiền tài khoản ? ");
+        let update = new BankAccount(maTaiKhoan,tenChuTaiKhoan,tenNganHang,tongSoTienTaiKhoan);
+        array.push(update);
+        display(array);
+    }
+    function add(value) {
+        let maTaiKhoan = prompt("Nhập mã tài khoản ?");
+        let tenChuTaiKhoan = prompt("Nhập tên chủ tài khoản ?");
+        let tenNganHang = prompt("Nhập tên ngân hàng ?");
+        let tongSoTienTaiKhoan = +prompt("Nhập tổng số tiền tài khoản ? ");
+        array[value]= new BankAccount(maTaiKhoan,tenChuTaiKhoan,tenNganHang,tongSoTienTaiKhoan);
+        display(array);
+    }
+    function del(value) {
+        if (confirm("Bạn có chắn chắn muốn xóa ? ")){
+            array.splice(value,1);
+            display(array);
+            alert("Đã xóa thành công ");
+        }
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h>Kiểm tra số nguyên lớn nhất</h><br><br>
+<input type="number" id="songuyen1" placeholder="Nhập số nguyên a"><br><br>
+<input type="number" id="songuyen2" placeholder="Nhập số nguyên b"><br><br>
+<input type="number" id="songuyen3" placeholder="Nhập số nguyên c"><br><br>
+<button type="button" onclick="KiemTra()">Kiểm Tra</button><br><br>
+<input type="text" id="KetQua"placeholder="Kết Quả">
+<script>
+    function KiemTra() {
+        let a = parseInt(document.getElementById("songuyen1").value);
+        let b = parseInt(document.getElementById("songuyen2").value);
+        let c = parseInt(document.getElementById("songuyen3").value);
+        if (a>b && a>c) {
+            document.getElementById("KetQua").value = +a;
+        }else if (b>c) {
+                document.getElementById("KetQua").value = +b;
+            }
+        else {
+            document.getElementById("KetQua").value = +c
+        }
+
+
+    }
+</script>
+
+
+
+</body>
+</html>

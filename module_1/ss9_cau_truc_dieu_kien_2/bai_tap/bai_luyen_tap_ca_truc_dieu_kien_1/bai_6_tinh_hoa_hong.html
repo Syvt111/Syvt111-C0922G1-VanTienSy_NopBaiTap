@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Quý I</th>
+        <th>Quý II</th>
+        <th> Quý III</th>
+        <th> Quý IV</th>
+        <th>Doanh số</th>
+    </tr>
+    <tr>
+        <td> <input type="number" id="doanhsoQ1" > VND</td>
+        <td> <input type="number" id="doanhsoQ2" > VND</td>
+        <td> <input type="number" id="doanhsoQ3" > VND</td>
+        <td> <input type="number" id="doanhsoQ4" > VND</td>
+        <td> <input type="number" id="doanhso" > VND</td>
+    </tr>
+    <tr>
+        <th colspan="5" > <button type="button" onclick="tinhhoahong()" >Tính hoa hồng</button>
+            <input type="text"id="hoahong" width="100"></th>
+    </tr>ư
+    <script>
+        function tinhhoahong() {
+            let Q1 = parseInt(document.getElementById("doanhsoQ1").value);
+            let Q2 = parseInt(document.getElementById("doanhsoQ2").value);
+            let Q3 = parseInt(document.getElementById("doanhsoQ3").value);
+            let Q4 = parseInt(document.getElementById("doanhsoQ4").value);
+            let doanhsoNam = Q1 + Q2 +Q3 + Q4;
+            document.getElementById("doanhso").value = +doanhsoNam;
+            if (doanhsoNam>=1200000000) {
+                document.getElementById("hoahong").value = "15%";
+            }else if (doanhsoNam<1200000000&&doanhsoNam>800000000) {
+                document.getElementById("hoahong").value = "10%";
+            }else if (doanhsoNam<800000000&&doanhsoNam>=400000000) {
+                document.getElementById("hoahong").value = "5%";
+            }else if (doanhsoNam<400000000) { document.getElementById("hoahong").value = "2%";
+
+            }
+
+        }
+    </script>
+
+</table>
+
+</body>
+</html>

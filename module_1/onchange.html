@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Chọn tên xe từ danh sách dưới đây.</p>
+
+<select id="mySelect" onchange="myFunction()">
+    <option value="Audi">Audi
+    <option value="BMW">BMW
+    <option value="Mercedes">Mercedes
+    <option value="Volvo">Volvo
+</select>
+<input type="text" onchange="mylensiu()" id="giaTri">
+<p>Khi bạn chuyển sang một xe mới, một hàm sẽ được kích hoạt để hiển thị giá trị ra ngoài.</p>
+
+<p id="demo"></p>
+<p id="result">Kết quả là :</p>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("mySelect").value;
+        document.getElementById("demo").innerHTML = "Bạn đã chọn xe: " + x;
+    }
+    function mylensiu() {
+        let y = document.getElementById("giaTri").value;
+        document.getElementById("result").innerHTML = "kết quả là : " + y*10 ;
+
+    }
+
+</script>
+
+</body>
+</html>

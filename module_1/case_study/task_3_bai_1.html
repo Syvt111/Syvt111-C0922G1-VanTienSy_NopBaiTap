@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prefix sums array</title>
+</head>
+<body>
+<script>
+    function prefixSums(){
+        let n = prompt("Nhập n là số phần tử của mảng a : ")
+        let a = [];
+        let b = [];
+        let sum = 0;
+        for (let i = 1; i <= n; i++) {
+            let number = prompt("Nhập phần tử thứ " + i + " :");
+            a.push(number);
+        }
+        for (let j = 0; j < a.length; j++) {
+            sum += +a[j];
+            b.push(sum)
+        }
+        return b ;
+    }
+    alert(prefixSums())
+
+
+
+</script>
+
+</body>
+</html>

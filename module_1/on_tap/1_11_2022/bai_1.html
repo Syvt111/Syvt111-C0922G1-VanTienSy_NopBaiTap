@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhập n là số phần tử của mảng nhập vào ?");
+    let arrayNumbers = [];
+    for (let i = 0; i < n; i++) {
+        arrayNumbers[i] = parseInt(prompt("Nhập phần tử cho mảng !"))
+    }
+
+    function trungBinhSoLe() {
+        let count = 0;
+        let sum = 0;
+        for (let j = 0; j < arrayNumbers.length; j = j + 2) {
+            if (arrayNumbers[j] % 2 != 0) {
+                sum += +arrayNumbers[j];
+                count++;
+            }
+        }
+        if (count == 0) {
+            return sum;
+        } else {
+            let trungBinh;
+            trungBinh = sum / count;
+            return trungBinh;
+        }
+
+    }
+
+    document.write("Trung bình cộng các số lẻ ở vị trí chẵn : " + trungBinhSoLe() + "<br>");
+
+    function maxMin() {
+        let max = arrayNumbers[0];
+        let min = arrayNumbers[0];
+        let dayMin = [];
+        for (let j = 1; j < arrayNumbers.length; j++) {
+            if (arrayNumbers[j] > max) {
+                max = arrayNumbers[j];
+            }
+        }
+        document.write("Số lớn nhất trong mảng là : " + max + "<br>");
+        for (let e = 1; e < arrayNumbers.length; e++) {
+            if (arrayNumbers[e] < min) {
+                min = arrayNumbers[e];
+            }
+        }
+        for (let a = 0; a < arrayNumbers.length; a++) {
+            if (arrayNumbers[a] == min) {
+                dayMin.push(a);
+            }
+        }
+        document.write("Ví trí số nhỏ nhất trong mảng là :  " + dayMin + "<br>");
+
+    }
+
+    maxMin();
+
+    function soChinhPhuong() {
+        let a = 1;
+        let e = 3;
+        let count = 0;
+        let daySoChinhPhuong = [];
+        while (1000 > a && a >= 0) {
+            daySoChinhPhuong.push(a);
+            a = +a + e;
+            e = e + 2;
+        }
+        console.log(daySoChinhPhuong);
+        for (let i = 0; i < arrayNumbers.length; i++) {
+            for (let j = 0; j < daySoChinhPhuong.length; j++) {
+                if (arrayNumbers[i] == daySoChinhPhuong[j]) {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+
+    document.write("Số chính phương trong mảng có : " + soChinhPhuong() + " số" + "<br>");
+
+    function soNguyenTo() {
+        let count = 0;
+        let dayNguyenTo = [];
+        for (let i = 0; i < arrayNumbers.length; i++) {
+            if (arrayNumbers[i] != 0) {
+                for (let j = 1; j <= arrayNumbers[i]; j++) {
+                    if (arrayNumbers[i] % j == 0) {
+                        count++
+                    }
+                }
+                if (count == 2) {
+                    dayNguyenTo.push(arrayNumbers[i])
+                } else count = 0
+            }
+        }
+        document.write("Các số nguyên tố trong mảng là : " + dayNguyenTo + "<br>");
+
+    }
+
+    soNguyenTo();
+
+    function timSoAm() {
+        let arrayNumbers1 = arrayNumbers;
+        for (let i = 0; i < arrayNumbers1.length; i++) {
+            if (arrayNumbers1[i] < 0) {
+                arrayNumbers1[i] = 0;
+            }
+        } document.write(" Mảng mới xóa số âm là : " + arrayNumbers1 + "<br>");
+
+        for (let i = 0; i < arrayNumbers1.length; i++) {
+            if (arrayNumbers1[i] == 0) {
+               arrayNumbers1.splice(i, 1);
+                i--;
+            }
+        }
+        document.write(" Mảng mới xóa số âm là : " + arrayNumbers1 + "<br>");
+    }
+    timSoAm();
+    arrayNumbers.sort(function (a,b) {
+        return a -b;
+    })
+    document.write("Mảng được sắp xếp là : "+ arrayNumbers);
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("Nhập n số phần tử của mảng số nguyên ")
+    let mangSoNguyen = [];
+    for (let i = 0; i < n; i ++){
+        mangSoNguyen[i] = prompt("Nhập phầ tử thứ " + i);
+    }
+    function timSoNguyenTo(array) {
+        let mangSoNguyenTo = [];
+        let count = 0;
+        for (let i = 0; i < array.length; i++){
+            for (let j = 1; j <= array[i]; j ++){
+                if (array[i]%j===0){
+                    count ++
+                }
+            }
+            if (count===2){
+                mangSoNguyenTo.push(array[i]);
+            }else {
+                count = 0 ;
+            }
+        }
+        let result = mangSoNguyenTo.sort(function (a,b) {
+            return a -b;
+        })
+        return document.write("Mãng các số nguyên tố : " + result);
+    }
+    timSoNguyenTo(mangSoNguyen)
+
+</script>
+
+</body>
+</html>

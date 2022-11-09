@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyentap02_03</title>
+    <p>Calculate The Factorial</p>
+    <p>Enter a number</p> <input type="number" id="enterNumber">
+    <button type="button" onclick="tinhGiaiThua(this.value)">Enter</button>
+    <div id="result"></div>
+</head>
+<body>
+<script>
+    function tinhGiaiThua(a) {
+        let result =1;
+        for (let i = 1; i <= a; i++) {
+            result = result * i;
+        }return result;
+    }
+    let b = parseFloat(document.getElementById("enterNumber").value);
+    alert(tinhGiaiThua(b));
+</script>
+</body>
+</html>

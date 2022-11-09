@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h> Tính giá điện sinh hoạt</h>
+<table>
+    <tr>
+        <td>Điện tiêu thụ :</td>
+        <td><input type="text" id="chisodien"><span>kWh</span></td>
+    </tr>
+    <tr>
+        <td><button type="button"onclick="tinhtien()">Giá điện :</button></td>
+        <td></span><input type="text" id="tiendien"><span>vnd/kWh</span></td>
+    </tr>
+</table>
+<script>
+    function tinhtien() {
+        let sodien = parseInt(document.getElementById("chisodien").value) ;
+        if (sodien>0&&sodien<=50 ) {
+            document.getElementById("tiendien").value = "1678";
+        }else if (sodien>=51&&sodien<=100) {
+            document.getElementById("tiendien").value = "1734";
+        }else if (sodien>=101&&sodien<=200) {
+            document.getElementById("tiendien").value = "2014";
+        }else if (sodien>=201&&sodien<=300) {
+            document.getElementById("tiendien").value = "2536";
+        }else if (sodien>=301&&sodien<=400) {
+            document.getElementById("tiendien").value = "2834";
+        }else if (sodien>400) {
+            document.getElementById("tiendien").value = "2927";
+        }else {
+            document.getElementById("tiendien").value = "Xin mời nhập lại !";
+        }
+
+    }
+</script>
+
+</body>
+</html>

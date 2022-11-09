@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình chữ nhật rỗng</title>
+</head>
+<body>
+<p>Vẽ hình chữ nhật rỗng</p>
+<div id="result"></div>
+<div id="result2"></div>
+<div id="result3"></div>
+<script>
+    function drawRectangle(){
+        let e1 = "";
+        for (let i = 0; i <5; i++){
+            e1 += "* "
+        }
+        document.getElementById("result").innerHTML =  "<pre>"+ e1 +"</pre>";
+        let e2 = "*       *"+"<br>"+"<br>";
+        let e4 = "*       *"+"<br>";
+        document.getElementById("result2").innerHTML = "<pre>" +  e2 + e4 + "</pre>";
+        let e3 = "";
+        for (let i = 0; i <5; i++){
+            e3 += "* "
+        }
+        document.getElementById("result3").innerHTML =  "<pre>"+ e3 +"</pre>";
+    }
+    drawRectangle();
+
+
+
+</script>
+
+</body>
+</html>

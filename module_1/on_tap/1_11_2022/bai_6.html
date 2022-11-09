@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhập n là số phần tử của mảng nhập vào ?");
+    let arrayNumbers = [];
+    let i = 1;
+    while ( i <= n) {
+      let a = parseInt(prompt("Nhập phần tử thứ " + i ));
+      if (a > 0){
+          arrayNumbers.push(a);
+          i++
+      }else {
+          alert("Nhập lại phần tử thứ " + i);
+      }
+    }
+
+
+    function chanLe() {
+        let arrayChan = [];
+        let chan = 0;
+        let arrayLe = [];
+        let le = 0
+        for (let i = 0; i < arrayNumbers.length; i++) {
+            if (arrayNumbers[i] % 2 == 0) {
+                arrayChan.push(arrayNumbers[i]);
+                chan ++
+            } else {
+                arrayLe.push(arrayNumbers[i]);
+                le++
+            }
+
+        }document.write("Mảng số chẵn : " + arrayChan + "<br>");
+        document.write("Mảng số lẻ : " + arrayLe + "<br>");
+    }
+
+    chanLe();
+
+
+</script>
+</body>
+</html>

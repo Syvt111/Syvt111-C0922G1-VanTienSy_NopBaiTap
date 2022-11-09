@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h> Tính thuế thu nhập cá nhân</h>
+<table>
+    <tr>
+        <td>Thu nhập tháng :</td>
+        <td><input type="text" id="thunhapthang"><span>vnd</span></td>
+    </tr>
+    <tr>
+        <td><button type="button"onclick="tienthue()">Tiền thuế :</button></td>
+        <td></span><input type="text" id="mucthue"><span>vnd</span></td>
+    </tr>
+</table>
+<script>
+    function tienthue() {
+        let luongthang = parseInt(document.getElementById("thunhapthang").value) ;
+       if (luongthang<=5000000){
+           document.getElementById("mucthue").value= +(luongthang*0.05);
+       }else if (luongthang>5000000&&luongthang<=10000000){
+           document.getElementById("mucthue").value= +(luongthang*0.1-250000);
+       }else if (luongthang>10000000&&luongthang<=18000000){
+           document.getElementById("mucthue").value= +(luongthang*0.15-750000);
+       }else if (luongthang>18000000&&luongthang<=32000000){
+           document.getElementById("mucthue").value= +(luongthang*0.2-1650000);
+       }else if (luongthang>32000000&&luongthang<=52000000){
+           document.getElementById("mucthue").value= +(luongthang*0.25-3250000);
+       }else if (luongthang>52000000&&luongthang<=80000000){
+           document.getElementById("mucthue").value= +(luongthang*0.3-5850000);
+       }else if (luongthang>80000000){
+           document.getElementById("mucthue").value= +(luongthang*0.35-9850000);
+       }else {
+           document.getElementById("mucthue").value= "Xin nhập lại số thu nhập";
+       }
+
+    }
+</script>
+
+</body>
+</html>

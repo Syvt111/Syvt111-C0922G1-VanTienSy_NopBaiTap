@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1"    >
+    <tr>
+        <th colspan="5" >
+            <button type="button" onclick="tinhdiem()">Tính điểm trung bình</button>
+            </th>
+    </tr>
+    <tr>
+        <td>Điểm kiểm tra </td>
+        <td> Điểm thi giữa kỳ</td>
+        <td> Điểm thi cuối kỳ</td>
+        <td> Điểm trung bình</td>
+        <td> Xếp loại</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" id = "nhapdiemkiemtra" style="padding:10px" >
+        </td>
+        <td>
+            <input type="number" id = "nhapdiemgiuaky"style="padding:10px" >
+        </td>
+        <td>
+            <input type="number" id = "nhapdiemcuoiky"style="padding:10px" >
+        </td>
+        <td>
+            <input type="text" id = "diemtrungbinh"style="padding:10px" >
+        </td>
+        <td>
+            <input type="text" id = "xeploai"style="padding:10px" >
+        </td>
+    </tr>
+</table>
+<script>
+    function tinhdiem() {
+    let a = parseInt(document.getElementById("nhapdiemkiemtra").value);
+    let b = parseInt(document.getElementById("nhapdiemgiuaky").value);
+    let c = parseInt(document.getElementById("nhapdiemcuoiky").value);
+    let A = (a + b*2 + c*4)/7;
+    document.getElementById("diemtrungbinh").value = +A;
+    if (A >= 9) {
+        document.getElementById("xeploai").value = "Xuất sắc";
+    } else if (A < 9 && A >= 8) {
+        document.getElementById("xeploai").value = "Giỏi";
+    } else if (A >= 6.5 && A < 8) {
+        document.getElementById("xeploai").value = "Khá";
+    } else if (A >= 4 && A < 6.5) {
+        document.getElementById("xeploai").value = "Trung bình";
+    } else {
+        document.getElementById("xeploai").value = "Yếu";
+    }
+
+}
+</script>
+</body>
+</html>

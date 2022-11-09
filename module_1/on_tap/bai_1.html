@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhập n :");
+    let arr = [];
+    for (let i = 1; i <= n; i++) {
+        let a = prompt("Nhập số thứ " + i + " :");
+        arr.push(a);
+    }
+    for (let item of arr) {
+        document.write(item + " ;");
+    }
+    // alert(arr);
+    let count1 = 0;
+    let count2 = 0;
+    let a = "OK";
+    let b = "No";
+
+    function kiemTraChanLe() {
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                count1++;
+            } else {
+                count2++;
+            }
+        }
+        if (count1 == count2) {
+            return a;
+        } else {
+            return b;
+        }
+    }
+
+    document.write("    " + kiemTraChanLe());
+
+</script>
+
+</body>
+</html>

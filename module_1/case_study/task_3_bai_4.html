@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển số thành chữ</title>
+</head>
+<body>
+<script>
+    let digits = ["không", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"];
+    let n = prompt("Nhập số :");
+    let a = n.split("");
+    let b = [];
+    for (let i = 0; i < a.length; i++) {
+        b.push(digits[a[i]]);
+    }
+    let result = b.join(" ")
+document.write(result);
+
+</script>
+
+</body>
+</html>

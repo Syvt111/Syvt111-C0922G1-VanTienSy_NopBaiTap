@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>Counts the number of vowels within a string</title>
+</head>
+<body>
+<p>Enter a string</p>
+<input type="text" id="enterString">
+<button type="button" onclick="checkVowel()">Check</button>
+<div id="result"></div>
+    <script>
+
+        function checkVowel() {
+            let str = document.getElementById("enterString").value;
+            let vowel_list = "aeiouAEIOU";
+            let count = 0;
+            for (let i=0; i <str.length;i++){
+                if (vowel_list.indexOf(str[i])!==-1){
+                    count += 1;
+                }
+            }document.getElementById("result").innerHTML="The number of vowels : "+ count;
+
+        }
+
+    </script>
+
+</body>
+</html>

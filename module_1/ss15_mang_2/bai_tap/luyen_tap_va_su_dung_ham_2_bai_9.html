@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhap ky tu :");
+    let string = "hello codegym";
+    kiemTraString(a);
+    function kiemTraString(a) {
+        let count = string.split(a).length - 1;
+        if (count == 0) {
+            return -1
+        }
+        return count;
+    }
+    document.write(kiemTraString(a));
+
+</script>
+</body>
+</html>

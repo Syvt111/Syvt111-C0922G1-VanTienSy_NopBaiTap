@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập điểm học viên thi cuối module 1</title>
+    <style>
+        body {padding: 20px; font-size: 10px}
+    </style>
+</head>
+<body>
+<h1>Nhập điểm thi module 1</h1>
+<input type="text" size="10" id = "diemModule1">
+<button type="submit" onclick="Nhap()" >Nhập</button>
+
+<script>
+    function Nhap() {
+        var a = parseInt(document.getElementById("diemModule1").value)
+        if (a >= 75) {document.write("Pass Module 1")}
+        else {document.write("Fail Module 1")};
+    }
+
+</script>
+
+</body>
+</html>

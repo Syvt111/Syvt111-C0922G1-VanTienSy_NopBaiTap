@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h>Kiểm tra a, b, c là cạnh của tam giác ?</h>
+<p> Cạnh a</p>
+<input type="text" id="canhA"><br>
+<p> Cạnh b</p>
+<input type="text" id="canhB"><br>
+<p> Cạnh c</p>
+<input type="text" id="canhC"><br><br>
+
+<button type="button" onclick="kiemtraABC()">Kiểm Tra</button><br><br>
+<span>Kết quả :</span><span id="ketqua"></span>
+<script>
+    function kiemtraABC() {
+        let a = parseInt(document.getElementById("canhA").value);
+        let b = parseInt(document.getElementById("canhB").value);
+        let c = parseInt(document.getElementById("canhC").value);
+            if (a>0 && b>0&& c > 0 && a + b > c && b + c > a && a + c > b){
+                document.getElementById("ketqua").innerText = " 3 cạnh của tam giác";
+            }else {
+                document.getElementById("ketqua").innerText = " Không phải 3 cạnh của tam giác";
+            }
+
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let mangKyTu = [];
+    let count = 1;
+    let n = parseInt(prompt("Nhập n <=20 là số phần tử nhập vào"))
+    if (n <= 20) {
+        for (let e = 0; e < n; e++) {
+            mangKyTu[e] = prompt("Nhập phần tử thứ " + e);
+        }
+    }
+
+    document.write("Mảng nhập vào là :" + mangKyTu + "<br>" + "Kết quả : " + "<br>");
+    for (let i = 0; i < mangKyTu.length; i++) {
+        for (let j = i + 1; j < mangKyTu.length; j++) {
+            if (mangKyTu[i] === mangKyTu[j]) {
+                count++;
+                mangKyTu.splice(j, 1);
+            }
+        }
+        document.write(mangKyTu[i] + " : " + count + "<br>");
+        mangKyTu.splice(i, 1);
+        i--;
+        count = 1;
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Vẽ tam giác vuông cân rỗng</p>
+<script>
+    let a = 4, b = 9;
+    for (let i = 0; i < a; i++) {
+        for (let j = 0; j < b - i - 1; j++) {
+            document.write("&nbsp&nbsp&nbsp")
+        }
+        document.write("*");
+        for (let j = 1; j < i * 2; j++) {
+            document.write("&nbsp&nbsp&nbsp");
+        }
+        if (i != 0) {
+            document.write("&nbsp&nbsp"+"*");
+        }
+
+        document.write("<br>"+"<br>");
+    }
+    document.write("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp");
+    for (let i=0; i<9; i++){
+        document.write("&nbsp*");
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="doanSo()">Bắt Đầu</button>
+<script>
+
+    function doanSo() {
+        let doanSook=true
+        let khoangsodoan = +prompt("Bạn muốn đoán số trong khoảng lớn nhất là bao nhiêu ?")
+        let songaunhien = Math.floor(Math.random(khoangsodoan) * khoangsodoan);
+        // alert(songaunhien);
+        let somuondoan = +prompt("Số bạn muốn đoán là bao nhiêu ?");
+        for (let count = 0; count <= 3; count++) {
+            if (somuondoan != songaunhien) {
+                if (somuondoan < songaunhien) {
+                    alert("Số bạn đoán bé hơn");
+                    somuondoan = prompt("Nhập số bạn muốn đoán");
+                    doanSook=false;
+                }
+                if (somuondoan > songaunhien) {
+                    alert("Số bạn đoán lớn hơn");
+                    somuondoan = prompt("Nhập số bạn muốn đoán");
+                    doanSook=false;
+                }
+            } else {
+                doanSook=true;
+                alert("Bạn đã đoán đúng");
+                break;
+            }
+        }
+        if (doanSook) alert("bạn đã được 5k")
+        else alert("bạn bị trừ 10k")
+    }
+
+</script>
+</body>
+</html>

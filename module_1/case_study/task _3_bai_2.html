@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tim so </title>
+</head>
+<body>
+<script>
+    let A = [];
+    let B = [];
+    let n = prompt("Nhập n là số phần tử của mảng A : ")
+    for (let i = 1; i <= n; i++) {
+        let a = prompt("Nhập phần tử thứ " + i + " của mảng A :");
+        A.push(a);
+    }
+    let m = prompt("Nhập m là số phần tử của mảng B : ")
+    for (let j = 1; j <= m; j++) {
+        let b = prompt("Nhập phần tử thứ " + j + " của mảng A :");
+        B.push(b);
+    }
+
+    function missingValue(A, B) {
+        let C = [];
+        for (let e = 0; e < B.length; e++) {
+            if (A.indexOf(B[e]) == -1) {
+                C.push(B[e]);
+            }
+        }
+        return C;
+
+    }
+    alert(missingValue(A,B));
+
+
+</script>
+
+
+</body>
+</html>

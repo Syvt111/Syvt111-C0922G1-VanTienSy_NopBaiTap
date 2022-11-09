@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Dictionary</title>
+</head>
+<body>
+<h1> Color Dictionary </h1>
+Nhập từ : <input type="text" id="nhapTu">
+<button type="button" onclick="tudien()" >Dich</button>
+<div id="result" ></div>
+<script>
+    let colorDict = ["Red", "Yellow", "Orange", "Blue", "Green", "Gray", "White", "Black", "Pink", "Brown" ];
+    let colorVn = ["đỏ", "vàng", "cam", "xanh dương", "xanh lá cây", "xám", "trắng", "đen", "hồng", "nâu" ];
+    let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    let colorDict2 = [];
+    for (j=0;j<colorDict.length;j++){
+        if (UPPER.indexOf(colorDict[j]!== -1)){
+            colorDict2.push(colorDict[j].toLowerCase());
+        }else if (LOWER.indexOf(colorDict[j]!== -1)){
+            colorDict2.push(colorDict[j].toUpperCase());
+        }else {
+            colorDict2.push("+colorDict[j]+")
+        }
+    } let colorDictLower = colorDict2;
+
+    function tudien() {
+        let nhapTuTra = (document.getElementById("nhapTu").value);
+        for (i=0;i<colorDict.length;i++){
+        if (nhapTuTra===colorDict[i]||nhapTuTra===colorDict2[i]){
+            document.getElementById("result").innerText=colorVn[i];
+        }
+        }
+
+    }
+</script>
+</body>
+</html>

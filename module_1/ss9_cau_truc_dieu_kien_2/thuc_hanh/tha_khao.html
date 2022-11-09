@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th> Amount </th>
+        <th> From Currency </th>
+        <th> To Currency </th>
+        <th></th><br>
+    </tr>
+    <tr>
+        <td>
+            <form>
+                <input type="text" name = "amount" id="name">
+            </form>
+        </td>
+        <td>
+            <select id="case1">
+                <option value = "VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="case2">
+                <option value="USD">USD</option>
+                <option value = "VND">VND</option>
+        </td>
+        <td>
+            <button type="submit" onclick="convert()">convert</button>
+
+        </td>
+    </tr>
+</table>
+
+<script>
+    function convert() {
+        var A = parseInt(document.getElementById("name").value);
+        var a = (document.getElementById("case1").value);
+        var b = (document.getElementById("case2").value);
+        var d = A*23000;
+        var e = A/23000;
+        if(a==b) {document.write("Amount : " +A+a)};
+        if (a=="USD" && b=="VND") {document.write("Amount : " +d+b)};
+        if (a=="VND" && b=="USD") {document.write("Amount : " +e+b)};
+
+
+
+    }
+
+</script>
+
+</body>
+</html>

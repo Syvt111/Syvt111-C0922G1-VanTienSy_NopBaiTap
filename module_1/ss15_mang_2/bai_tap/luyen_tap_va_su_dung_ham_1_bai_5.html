@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ngoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let chomSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+    star = prompt("Nhập tên ngôi sao");
+    timsao(star);
+
+    function timsao(star) {
+        let index = ngoiSao.indexOf(star);
+        if (index === -1) {
+            alert("Không tìm thấy chuổi sao");
+        } else {
+            alert(chomSao[index]);
+        }
+    }
+
+</script>
+</body>
+</html>

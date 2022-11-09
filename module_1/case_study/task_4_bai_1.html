@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuẩn hóa xâu ký tự</title>
+</head>
+<body>
+<script>
+    let newString = "";
+    let newArray1 = [];
+    let newArray = [];
+    let print = "";
+    function main() {
+        let string = prompt("Nhập chuổi ký tự !");
+        print = "<pre>"+string +"</pre>";
+        let arr = string.split(" ")
+        for (let i = 0; i < arr.length + 1; i++) {
+            if (arr[i] == "" && arr[i + 1] == "") {
+                arr.splice(i, 2)
+                i = i - 2;
+            }
+        }
+        for (let j = 0; j < arr.length; j++) {
+            newArray.push(arr[j].toLowerCase());
+        }
+        for (let e = 0; e < newArray.length; e++) {
+            newArray1.push(newArray[e].charAt(0).toUpperCase() + newArray[e].slice(1));
+        }
+        let max = newArray1[0].length;
+        let maxString = ""
+        for (let a = 1; a < newArray1.length; a++) {
+            if (newArray1[a].length > max) {
+                maxString = newArray1[a];
+            }
+        }
+        newString = newArray1.join(" ");
+        return print + "</br>" + newString + "</br>" + maxString ;
+    }
+
+    document.write(main());
+
+
+</script>
+
+</body>
+</html>

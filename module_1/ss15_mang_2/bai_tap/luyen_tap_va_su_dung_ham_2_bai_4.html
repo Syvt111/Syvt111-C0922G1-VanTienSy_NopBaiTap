@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Check Intger</p>
+<p>Enter a number</p> <input type="number" id="enterNumber">
+<button type="button" onclick="checkInteger(this.value)">Enter</button>
+<div id="result"></div>
+<script>
+    function checkInteger() {
+        let a = parseFloat(document.getElementById("enterNumber").value);
+        if (a == 0) {
+            document.getElementById("result").innerHTML = " a is 0";
+        } else if (a % 2 == 0) {
+            document.getElementById("result").innerHTML = "result is true";
+        } else if (a % 2 !== 0) {
+            document.getElementById("result").innerHTML = "result is false";
+        }
+    }
+</script>
+</body>
+</html>

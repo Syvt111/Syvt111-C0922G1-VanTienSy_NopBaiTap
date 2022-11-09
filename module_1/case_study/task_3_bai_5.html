@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gọi thức uống</title>
+</head>
+<body>
+<h2>CodeGym cafe</h2>
+<!--<table>-->
+
+<!--    <tr>-->
+<!--        <td><input type="text" id="chon"></td>-->
+<!--        <td><input type="number" id="soluong"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td><button type="submit"onclick="chonMon()">Chọn món</button></td>-->
+<!--        <td><button type="submit"onclick="soLuong()">Số lượng</button></td>-->
+<!--    </tr>-->
+<!--</table><br>-->
+
+<div id="result1"></div>
+<div id="result2"></div>
+<h3> Menu </h3>
+<span> 1. Cafe  </span><br>
+<span> 2. Cam vắt   </span><br>
+<span> 3. Nước ép cà rốt  </span><br>
+<span> 4. Nước ép cà chua   </span><br>
+<span> 5. Nước dừa   </span><br>
+<span> 6. Nước lọc </span><br><br>
+<button type="submit" onclick="oder()">Oder</button>
+
+<script>
+    // let oderMenu = [];
+    let a = 20;
+    let b = 25;
+    let c = 10;
+    let sum = 0;
+    function oder() {
+        for (let i = 1; i <= 7; i++) {
+            let mon = parseInt(prompt("Món bạn chọn là số mấy ? ( nhập số 7 để kết thúc oder)"));
+            // oderMenu.push(mon)
+            if (mon == 1) {
+                alert("Món bạn chọn có giá " + a + "k");
+                let soluong1 = prompt("Xin mời bạn nhập số lượng !")
+                sum += +a * soluong1;
+            } else if (2 <= mon && mon <= 5) {
+                alert("Món bạn chọn có giá " + b + "k");
+                let soluong2 = prompt("Xin mời bạn nhập số lượng !")
+                sum += +b * soluong2;
+            } else if (mon == 6) {
+                alert("Món bạn chọn có giá " + c + "k");
+                let soluong3 = prompt("Xin mời bạn nhập số lượng !")
+                sum += +c * soluong3;
+            } else if (mon == 7) {
+                break;
+            } else {
+                alert("Xin mời bạn nhập lại món ! ")
+            }
+        }
+        alert("Tổng số tiền thanh toán là : " + sum + "k");
+    }
+
+</script>
+
+</body>
+</html>

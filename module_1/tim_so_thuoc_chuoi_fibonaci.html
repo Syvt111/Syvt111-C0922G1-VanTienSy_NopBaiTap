@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function fibonaci(array) {
+        let fibonaci = [0, 1];
+        let n = 0, n1 = 1;
+        for (let i = 0; i < 100; i++) {
+            let a = n + n1;
+            fibonaci.push(a);
+            n = n1;
+            n1 = a;
+        }
+        let timFibonaci = [];
+        for (let e = 0; e < array.length; e++) {
+            for (let j = 0; j < fibonaci.length; j++) {
+                if ( array[e] == fibonaci[j]) {
+                    timFibonaci.push(array[e]);
+                }
+            }
+        }
+        return timFibonaci;
+    }
+
+    let manSoNguyen = [];
+    let m = prompt("Nhập m là số phần tử mảng nhập vào ? ")
+    for (let j = 1; j <= m; j++) {
+        manSoNguyen[j] = prompt("Nhập phần tử thứ " + j + " :")
+    }
+    let array = fibonaci(manSoNguyen);
+    array.sort(function (a, b) {
+        return a - b;
+    })
+    alert(array)
+
+    // function check(a) {
+    //     let check=false;
+    //     let b=0;
+    //     let i=1
+    //     if (a===0) check=true;
+    //     else {
+    //         while (i <= a && b <= a) {
+    //             b += i;
+    //             i += b;
+    //             if (b === a || i === a) check = true
+    //         }
+    //     }
+    //     return check
+    // }
+    // function findFibo(a) {
+    //     let fibo=[];
+    //     for (let i=0;i<a.length;i++) {
+    //         if (check(a[i])===true) fibo.push(a[i])
+    //     }
+    //     return fibo
+    // }
+    // let n= parseInt(prompt('nhap so phan tu cua mang'));
+    // let newarr=[]
+    // for (let i=0;i<n;i++) {
+    //     newarr[i]=parseInt(prompt('nhap vao phan tu thu i'));
+    // }
+    // let a=findFibo(newarr);
+    // a.sort(function (a,b) {
+    //     return (a-b)
+    // })
+    // alert(a);
+
+</script>
+
+</body>
+</html>

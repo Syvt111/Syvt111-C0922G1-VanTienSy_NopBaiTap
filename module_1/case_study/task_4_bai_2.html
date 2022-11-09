@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số lượng ký tự khác nhau</title>
+</head>
+<body>
+<script>
+    let string = prompt("Nhập chuỗi ký tự ");
+    let arr = string.split("");
+
+    function checkWord() {
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i] === arr[j]) {
+                    arr.splice(j, 1)
+                    i--;
+                }
+            }
+        }
+        return arr.length
+    }
+    console.log(checkWord());
+
+</script>
+</body>
+</html>

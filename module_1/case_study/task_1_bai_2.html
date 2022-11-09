@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ tam giác vuông cân rỗng</title>
+</head>
+<body>
+<div id="result"></div>
+<script>
+    let e1 = "*" + "<br>"+"<br>";
+    let e2 = "";
+    let space = "&nbsp";
+    for (let i =1; i <=3; i ++){
+        space += space;
+        e2 += "*" + space + "*" + "<br>"+"<br>";
+    }
+    let e3 = "*  *  *  *  *";
+    document.getElementById("result").innerHTML = "<pre>" + e1 + e2 +e3+ "</pre>" ;
+
+</script>
+</body>
+</html>

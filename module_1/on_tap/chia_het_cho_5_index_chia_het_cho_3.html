@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function result() {
+        let n = prompt("Nhập n <= 50 là số phần tử của mảng số nguyên ! ")
+        let array = [];
+        for (let i = 0; i < n; i++) {
+            let a = prompt(" Nhập phẩn tử a cho mảng");
+            array.push(a);
+        }
+        document.write("Mảng nhập vào : array = [ " + array + " ]"+"<br>");
+        let count = 0;
+        let sum = 0;
+        for (let j = 0; j < array.length; j = j + 3) {
+            if (array[j] % 5 == 0) {
+                count++;
+                sum += + array[j];
+            }
+        }
+        alert(sum)
+        alert(count)
+        let average
+        average = sum / count;
+        document.write("Giá trị trung bình của số chia hết cho 5 ở index chia hết cho 3 là : " + average);
+    }
+    result();
+
+
+</script>
+
+</body>
+</html>

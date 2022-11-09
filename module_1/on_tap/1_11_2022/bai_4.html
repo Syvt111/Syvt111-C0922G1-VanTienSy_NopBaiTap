@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhập n là số phần tử của mảng nhập vào ?");
+    let arrayNumbers = [];
+    for (let i = 0; i < n; i++) {
+        arrayNumbers[i] = parseInt(prompt("Nhập phần tử cho mảng !"))
+    }
+    let e = Math.floor(n/2 );
+    let arrayNumbers1 = [];
+    let arrayNumbers2 = [];
+    for (let i = 0; i < e; i++) {
+        arrayNumbers1.push(arrayNumbers[i])
+    }
+    for (let j = e; j < n; j++) {
+        arrayNumbers2.push(arrayNumbers[j])
+    }
+    document.write("Mảng 1 : " + arrayNumbers1 + "<br>");
+    document.write("Mảng 2 : " + arrayNumbers2 + "<br>");
+
+
+
+</script>
+
+</body>
+</html>

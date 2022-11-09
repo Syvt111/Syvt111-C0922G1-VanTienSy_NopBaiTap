@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Kiểm tra số lớn hơn 10</h1>
+<p>Nhập 10 số nguyên : </p>
+<input type="text"; id = "nhapSoNguyen">
+<button type="button" onclick="themSoNguyen()" value="Add">Add</button>
+<button type="button" onclick="checkNumber()" >Kiểm Tra</button>
+<div id ="daysonhap"></div><br>
+<div id="result"></div>
+<script>
+    let a = 0;
+    let daySoNguyen=[];
+    function themSoNguyen() {
+            daySoNguyen[a]=parseFloat(document.getElementById("nhapSoNguyen").value);
+            a++;
+            document.getElementById("nhapSoNguyen").value = "";
+            let e = ""
+            for(let i=0;i<daySoNguyen.length;i++){
+                e += "Sô thứ " + (i+1) + " = " + daySoNguyen[i] + "<br/>";
+            }  document.getElementById("daysonhap").innerHTML=e;
+    }
+    function checkNumber() {
+        let f = "";
+        for (let j = 0; j < daySoNguyen.length; j++) {
+            if (daySoNguyen[j] <= 10) {
+                f += daySoNguyen[j]+"  ";
+                document.getElementById("result").innerHTML ="Các số lớn hơn 10 là : " + f;
+            }
+        }
+    }
+</script>
+</body>
+</html>

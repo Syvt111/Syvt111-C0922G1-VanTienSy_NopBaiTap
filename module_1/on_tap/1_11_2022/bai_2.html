@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt("Nhập n là số phần tử của mảng nhập vào ?");
+    let arrayNumbers = [];
+    for (let i = 0; i < n; i++) {
+        arrayNumbers[i] = +prompt("Nhập phần tử cho mảng !");
+    }
+
+    function kiemTraDoiXung() {
+        if (arrayNumbers.length%2==0){
+            for (let i = 0; i < arrayNumbers.length; i++) {
+                if (arrayNumbers[i] !== arrayNumbers[arrayNumbers.length - 1 - i]) {
+                    return document.write("Mảng Không đối xứng")
+
+                } else return document.write("Mảng đối xứng !");
+            }
+        }else document.write("Mảng không đói xứng !");
+        }
+
+    kiemTraDoiXung();
+
+</script>
+
+</body>
+</html>

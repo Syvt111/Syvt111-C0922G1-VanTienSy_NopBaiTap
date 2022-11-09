@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th colspan="4"> Giải phường trình A*X2+BX+C=0</th>
+    </tr>
+    <tr>
+        <th>Nhập A : <input type="text" id="NguyenTuA"></th>
+        <th>Nhập B : <input type="text" id="NguyenTuB"></th>
+        <th>Nhập C : <input type="text" id="NguyenTuC"></th>
+        <th><button type="button" onclick="layNghiem()">Giải Phương trình </button><br>
+            X1 :<input type="text" id="nghiem1"><br>
+            X2 :<input type="text" id="nghiem2">
+        </th>
+
+    </tr>
+</table>
+<script>
+    function layNghiem() {
+        let A = parseInt(document.getElementById("NguyenTuA").value);
+        let B = parseInt(document.getElementById("NguyenTuB").value);
+        let C = parseInt(document.getElementById("NguyenTuC").value);
+        let delta = B*B - 4*A*C;
+
+        if (delta<0) {
+            document.getElementById("nghiem1").value= "Vô nghiệm";
+            document.getElementById("nghiem2").value= "Vô nghiệm";
+        }else if (delta==0) {
+            document.getElementById("nghiem1").value= +-B/2/A;
+            document.getElementById("nghiem2").value= +-B/2/A;
+        }else {
+            document.getElementById("nghiem1").value= +(-B+Math.sqrt(delta))/2/A;
+            document.getElementById("nghiem2").value= +(-B-Math.sqrt(delta))/2/A;
+        }
+
+    }
+</script>
+</body>
+</html>

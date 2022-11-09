@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 align="center">Quản lý sản phẩm</h2>
+<p align="center">
+    <button type="submit" onclick="add()" value="create" style="background: #0077aa">Thêm Sản Phẩm</button>
+</p>
+<div id="result"></div>
+<script>
+    class SanPham {
+        constructor(maSanPham, tenSanPham, hangSanXuat, gia) {
+            this.maSanPham = maSanPham;
+            this.tenSanPham = tenSanPham;
+            this.hangSanXuat = hangSanXuat;
+            this.gia = gia;
+        }
+
+        getMaSanPham() {
+            return this.maSanPham;
+        }
+
+        getTenSanPham() {
+            return this.tenSanPham;
+        }
+
+        getHangSanXuat() {
+            return this.hangSanXuat;
+        }
+
+        getGia() {
+            return this.gia;
+        }
+
+        setMaSanPham(value) {
+            return this.maSanPham = value;
+        }
+
+        setTenSanPham(value) {
+            return this.tenSanPham = value;
+        }
+
+        setHangSanXuat(value) {
+            return this.hangSanXuat = value;
+        }
+
+        setGia(value) {
+            return this.gia = value;
+        }
+    }
+
+    let array = [];
+    let table;
+
+    function display(array) {
+        table = "<table border='1'width='700'style='font-size: 17px' align='center'>" +
+            "<tr style='background: #00aecd'>" +
+            "<th>Mã Sản Phẩm</th>" +
+            "<th>Tên Sản Phẩm</th>" +
+            "<th>Hãng Sản Xuất</th>" +
+            "<th>Giá (vnd)</th>" +
+            "</tr>";
+        for (let i = 0; i < array.length; i++) {
+            table += "<tr>" +
+                "<td>" + array[i].getMaSanPham() + "</td>" +
+                "<td>" + array[i].getTenSanPham() + "</td>" +
+                "<td>" + array[i].getHangSanXuat() + "</td>" +
+                "<td>" + array[i].getGia() + "</td>" +
+                "</tr>";
+        }
+        table += "</table>";
+
+        document.getElementById("result").innerHTML = table;
+    }
+    display(array);
+
+    function add() {
+        let maSanPham = prompt("Nhập mã sản phẩm");
+        let tenSanPham = prompt(" Nhập tên sản phẩm");
+        let hangSanXuat = prompt("Nhập hãng sản xuất");
+        let gia = +prompt("Nhập giá sản phẩm");
+        let themSanPham = new SanPham (maSanPham, tenSanPham, hangSanXuat, gia);
+        array.push(themSanPham);
+        display(array);
+    }
+
+
+
+</script>
+</body>
+</html>

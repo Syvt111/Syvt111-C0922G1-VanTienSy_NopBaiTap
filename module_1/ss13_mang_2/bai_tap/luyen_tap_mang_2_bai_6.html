@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let chuoi = "bai-tap-luyen-mang-2";
+    let chuoi2 = chuoi.split("");
+    for (let i = 0; i < chuoi2.length; i++) {
+        if (chuoi2[i] == "-") {
+            chuoi2[i] = "_";
+        }
+    }
+    console.log(chuoi2);
+    for (let item of chuoi2) {
+        document.write(item);
+    }
+
+
+</script>
+</body>
+</html>

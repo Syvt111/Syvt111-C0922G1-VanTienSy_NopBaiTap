@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Kiểm Tra Số Nguyên</p><br>
+<input type="text" id="nhappso">
+<button type="button" onclick="Ktra()">Kiểm Tra</button>
+ <input type="text" id="inketqua" placeholder="Kết quả">
+<script>
+    function Ktra() {
+       let a =  parseInt(document.getElementById("nhappso").value);
+       if (a>0) {
+           document.getElementById("inketqua").value = " a là số nguyên dương ";
+       }else if (a < 0) { document.getElementById("inketqua").value = " a là số nguyên âm ";
+       }else {document.getElementById("inketqua").value = " a là số 0 ";
+       }
+
+
+    }
+</script>
+
+</body>
+</html>

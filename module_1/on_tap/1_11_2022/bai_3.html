@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    function enterArray() {
+        let n = prompt("Nhập n là số phần tử :");
+        let arr = [];
+        let i = 1;
+        while (i <= n) {
+            let a = prompt("Nhập phần tử thứ " + i + " :");
+            if (arr.indexOf(a) == -1) {
+                arr.push(a);
+                i++;
+            } else {
+                alert("Nhập lại phần tử thứ " + i + " :");
+            }
+        } return arr;
+    }
+    alert(enterArray());
+</script>
+
+</body>
+</html>

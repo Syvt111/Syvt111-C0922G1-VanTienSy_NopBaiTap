@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Nối hai mảng a và b</h1>
+<p>Nhập mảng a 10 số nguyên : </p>
+<input type="text"; id = "nhapSoNguyenA">
+<button type="button" onclick="themSoNguyenA()" value="Add">Add</button>
+<div id="mangA"></div>
+<p>Nhập mảng b 10 số nguyên : </p>
+<input type="text"; id = "nhapSoNguyenB">
+<button type="button" onclick="themSoNguyenB()" value="Add">Add</button>
+<div id="mangB"></div><br>
+<button type="button" onclick="connectarray()" value="connect">Connect</button>
+<div id="result"></div>
+<script>
+    let a = 0;
+    let b = 0;
+    let arrayA=[];
+    let arrayB=[];
+    function themSoNguyenA() {
+        arrayA[a]=parseFloat(document.getElementById("nhapSoNguyenA").value);
+        a++;
+        document.getElementById("nhapSoNguyenA").value = "";
+        let e = ""
+        for(let i=0;i<arrayA.length;i++){
+            e += + arrayA[i] + "; ";
+        }  document.getElementById("mangA").innerHTML= "  arrayA : [ " +e + " ]";
+    }
+    function themSoNguyenB() {
+        arrayB[b]=parseFloat(document.getElementById("nhapSoNguyenB").value);
+        b++;
+        document.getElementById("nhapSoNguyenB").value = "";
+        let f = ""
+        for(let j=0;j<arrayB.length;j++){
+            f += + arrayB[j] + "; ";
+        }  document.getElementById("mangB").innerHTML= "  arrayB : [ " +f + " ]";
+    }
+    function connectarray() {
+        let arrayC = arrayA.concat(arrayB);
+        let h = ""
+        for (let c = 0; c < arrayC.length; c++) {
+            h += +arrayC[c] + "; ";
+            document.getElementById("result").innerHTML = " arrayC : [ " + h + " ]";
+        }
+    }
+
+
+
+
+</script>
+</body>
+</html>

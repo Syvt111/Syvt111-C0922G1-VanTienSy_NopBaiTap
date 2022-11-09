@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let string = prompt("Nhập Chuỗi ký tự ");
+
+    function kiemDoiXung(string) {
+        let array = string.split("");
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] !== array[array.length - 1 - i]) {
+                return document.write("Chuỗi [ " + string + "] là chuỗi không đối xứng");
+            }
+        }
+        return document.write("Chuỗi [ " + string + "] là chuỗi đối xứng");
+    }
+
+    kiemDoiXung(string);
+
+</script>
+
+</body>
+</html>

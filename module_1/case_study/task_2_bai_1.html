@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lương nhân viên</title>
+</head>
+<body>
+<h1> Monthly salary</h1>
+<p> Enter a salary :</p><input type="number" id="enterSalary" placeholder="Monthly salary"> Vnd <br><br>
+<button type="submit" value="Enter" onclick="checkNetSalary()">Enter</button>
+<br><br>
+<div id="result1">Income Salary :</div>
+<br>
+<div id="result2">Net Salary :</div>
+<script>
+    function checkNetSalary() {
+        let income ;
+        let netSalary ;
+        let monthlySalary = parseInt(document.getElementById("enterSalary").value);
+        if (monthlySalary >= 15000000) {
+            income = 0.2 * monthlySalary;
+            netSalary = monthlySalary - income;
+            document.getElementById("result1").innerHTML = "Income Salary ( 20%) : " + income + " Vnd";
+            document.getElementById("result2").innerHTML = "Net Salary : " + netSalary + " Vnd";
+
+        } else if (7000000 <= monthlySalary < 15000000) {
+            income = 0.1 * monthlySalary;
+            netSalary = monthlySalary - income;
+            document.getElementById("result1").innerHTML = "Income Salary ( 10%) : " + income + " Vnd";
+            document.getElementById("result2").innerHTML = "Net Salary : " + netSalary + " Vnd";
+        } else {
+            income = 0.05 * monthlySalary;
+            netSalary = monthlySalary - income;
+            document.getElementById("result1").innerHTML = "Income Salary ( 5%) : " + income + " Vnd";
+            document.getElementById("result2").innerHTML = "Net Salary : " + netSalary + " Vnd";
+        }
+
+        return
+
+    }
+
+    checkNetSalary()
+
+</script>
+
+
+</body>
+</html>

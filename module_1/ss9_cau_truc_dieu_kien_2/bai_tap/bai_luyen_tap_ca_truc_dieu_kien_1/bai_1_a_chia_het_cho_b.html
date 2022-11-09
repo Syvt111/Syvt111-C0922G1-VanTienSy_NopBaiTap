@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Enter number a :</p>
+<input type="number" id="enternumberA" placeholder="Enter Numer a"><br>
+<p>Enter Number b</p>
+<input type="number"id="enternumberB" placeholder="Enter Number b"><br>
+<p>Result</p>
+<input type="text" id="result" placeholder="Result"><br><br>
+<button type="button" onclick="check()">Check</button>
+<script>
+    function check() {
+        let a = parseFloat(document.getElementById("enternumberA").value);
+        let b =parseFloat(document.getElementById("enternumberB").value);
+        if (a%b==0) {
+            document.getElementById("result").value = " a chia hết cho b " ;
+        }else
+            document.getElementById("result").value = " a chia không hết cho b " ;
+    }
+</script>
+</body>
+</html>

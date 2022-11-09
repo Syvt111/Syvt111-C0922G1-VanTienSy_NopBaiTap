@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt(" Enter n is fraction of number");
+    let numerators = [];
+    let denominators = [];
+    for (let i=1;i<=n;i++){
+        let a = prompt("Enter array of numerators of " + i + " :");
+        numerators.push(a);
+        let b = prompt("Enter array of denominators of "+ i + " :");
+        denominators.push(b);
+    }
+    function maxFraction() {
+        let max = 0;
+        for (let j = 0; j < n; j++) {
+            if ( (numerators[j]/denominators[j]) > max ){
+                max = (numerators[j]/denominators[j])
+                 count=j;
+            }
+        }
+        return count;
+    }
+    alert("The max fraction of index is "+ maxFraction());
+
+</script>
+</body>
+</html>

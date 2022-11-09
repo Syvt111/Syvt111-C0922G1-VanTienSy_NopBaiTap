@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+
+<body>
+<table>
+    <tr>
+        <td colspan="7" >
+            <input type="text" id="enterarea" style="size: 50px;color: blue">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" onclick="layGiaTriTuButton(1)" value="1"style="padding: 10px;color: blue">1</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" onclick="layGiaTriTuButton(2)" value="2"style="padding: 10px;color: blue">2</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" onclick="layGiaTriTuButton(3)" value="3" style="padding: 10px;color: blue">3</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" onclick="layGiaTriTuButton(this.value)" value="+" style="padding: 10px;color: blue">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" onclick="layGiaTriTuButton(4)" value="4"style="padding: 10px;color: blue">4</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" onclick="layGiaTriTuButton(5)" value="5"style="padding: 10px;color: blue">5</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" onclick="layGiaTriTuButton(6)" value="6" style="padding: 10px;color: blue">6</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" onclick="layGiaTriTuButton(this.value)" value="-" style="padding: 10px;color: blue">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" onclick="layGiaTriTuButton(7)" value="7"style="padding: 10px;color: blue">7</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" onclick="layGiaTriTuButton(8)" value="8"style="padding: 10px;color: blue">8</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" onclick="layGiaTriTuButton(9)" value="9" style="padding: 10px;color: blue">9</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" onclick="layGiaTriTuButton(this.value)" value="*" style="padding: 10px;color: blue">X</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" onclick="Clear()" style="padding: 10px;color: blue">C</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" onclick="layGiaTriTuButton(0)" value="0"style="padding: 10px;color: blue">0</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" onclick="Enter()" style="padding: 10px;color: blue">=</button>
+        </td>
+        <td></td>
+        <td>
+            <button type="button" onclick="layGiaTriTuButton(this.value)" value="/" style="padding: 10px;color: blue">/</button>
+        </td>
+    </tr>
+
+</table>
+<script>
+    let phepTinh;
+    let a = 0
+function layGiaTriTuButton(a) {
+     phepTinh = document.getElementById("enterarea").value += a;
+}
+function Enter() {
+
+    document.getElementById("enterarea").value =eval(phepTinh);
+}
+function Clear() {
+    document.getElementById("enterarea").value = 0
+
+}
+
+
+
+</script>
+</body>
+</html>
