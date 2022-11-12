@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="577f3df2-ab9c-44fe-b9ec-6c852e2add63" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../ss4_lop_va_doi_tuong_trong_java/src/bai_tap/LuyenThuaToan.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss4_lop_va_doi_tuong_trong_java/src/bai_tap/LuyenThuaToan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_access_modifier_static_method_static_property/src/bai_tap/access_dodifier/Circle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_access_modifier_static_method_static_property/src/bai_tap/xay_dung_lop_chi_ghi_trong_java/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss5_access_modifier_static_method_static_property/src/bai_tap/xay_dung_lop_chi_ghi_trong_java/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_access_modifier_static_method_static_property/src/bai_tap/xay_dung_lop_chi_ghi_trong_java/TestStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss5_access_modifier_static_method_static_property/src/bai_tap/xay_dung_lop_chi_ghi_trong_java/TestStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_access_modifier_static_method_static_property/src/thuc_hanh/staric_method/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss5_access_modifier_static_method_static_property/src/thuc_hanh/staric_method/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_access_modifier_static_method_static_property/src/thuc_hanh/staric_method/TestStaticMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss5_access_modifier_static_method_static_property/src/thuc_hanh/staric_method/TestStaticMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_access_modifier_static_method_static_property/src/thuc_hanh/static_property/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss5_access_modifier_static_method_static_property/src/thuc_hanh/static_property/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_access_modifier_static_method_static_property/src/thuc_hanh/static_property/TestStaticProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss5_access_modifier_static_method_static_property/src/thuc_hanh/static_property/TestStaticProperty.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2HNwFv8kZUB0enPX7ajh7dNJlQc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Codegym/C0922G1-VanTienSy/module_2/ss6_inheritance/src"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="577f3df2-ab9c-44fe-b9ec-6c852e2add63" name="Changes" comment="" />
+      <created>1668138750192</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668138750192</updated>
+      <workItem from="1668138751494" duration="524000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
