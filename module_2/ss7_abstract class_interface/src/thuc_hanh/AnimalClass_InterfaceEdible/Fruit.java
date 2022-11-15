@@ -1,0 +1,2 @@
+package thuc_hanh.AnimalClass_InterfaceEdible;public class Fruit {
+}
