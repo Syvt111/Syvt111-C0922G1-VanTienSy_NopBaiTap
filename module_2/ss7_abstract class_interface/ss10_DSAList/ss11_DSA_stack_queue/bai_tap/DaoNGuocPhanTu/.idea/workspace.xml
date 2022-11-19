@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="46b88f94-7160-4193-abeb-5ced192956ce" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../src/bai_tap2/trien_khai_interface_colorable/Circle2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../src/bai_tap2/trien_khai_interface_colorable/CircleTest2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../src/bai_tap2/trien_khai_interface_colorable/Shape2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../src/bai_tap2/trien_khai_interface_colorable/ShapeTest2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../src/thuc_hanh/AnimalClass_InterfaceEdible/AbstractAndInterfaceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../src/thuc_hanh/AnimalClass_InterfaceEdible/AbstractAndInterfaceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../src/thuc_hanh/AnimalClass_InterfaceEdible/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../src/thuc_hanh/AnimalClass_InterfaceEdible/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../src/thuc_hanh/AnimalClass_InterfaceEdible/Apple.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../src/thuc_hanh/AnimalClass_InterfaceEdible/Apple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../src/thuc_hanh/AnimalClass_InterfaceEdible/Chicken.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../src/thuc_hanh/AnimalClass_InterfaceEdible/Chicken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../src/thuc_hanh/AnimalClass_InterfaceEdible/Edible.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../src/thuc_hanh/AnimalClass_InterfaceEdible/Edible.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../src/thuc_hanh/AnimalClass_InterfaceEdible/Fruit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../src/thuc_hanh/AnimalClass_InterfaceEdible/Fruit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../src/thuc_hanh/AnimalClass_InterfaceEdible/Orange.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../src/thuc_hanh/AnimalClass_InterfaceEdible/Orange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../src/thuc_hanh/AnimalClass_InterfaceEdible/Tiger.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../src/thuc_hanh/AnimalClass_InterfaceEdible/Tiger.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../.." />
+  </component>
+  <component name="ProjectId" id="2HfCQQAkGbbSaZPRstTq5aK5MV3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Codegym/C0922G1-VanTienSy/module_2/ss11_DSA_stack_queue/bai_tap/DaoNGuocPhanTu"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="46b88f94-7160-4193-abeb-5ced192956ce" name="Changes" comment="" />
+      <created>1668666734984</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668666734984</updated>
+      <workItem from="1668666736147" duration="124000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

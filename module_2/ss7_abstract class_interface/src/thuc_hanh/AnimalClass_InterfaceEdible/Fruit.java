@@ -1,2 +1,4 @@
-package thuc_hanh.AnimalClass_InterfaceEdible;public class Fruit {
+package thuc_hanh.AnimalClass_InterfaceEdible;
+
+public abstract class Fruit implements Edible{
 }

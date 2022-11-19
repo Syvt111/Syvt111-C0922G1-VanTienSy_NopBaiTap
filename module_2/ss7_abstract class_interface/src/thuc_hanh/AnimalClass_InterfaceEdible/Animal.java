@@ -1,2 +1,5 @@
-package thuc_hanh.AnimalClass_InterfaceEdible;public class Animal {
+package thuc_hanh.AnimalClass_InterfaceEdible;
+
+public abstract class Animal {
+    public abstract String makeSound();
 }
