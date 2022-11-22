@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ss11_DSA_stack_queue/bai_tap/ChuyenDoiSoThapPhanSangNhiPhan/ChuyenDoiSoThapPhanSangNhiPhan.iml" filepath="$PROJECT_DIR$/ss11_DSA_stack_queue/bai_tap/ChuyenDoiSoThapPhanSangNhiPhan/ChuyenDoiSoThapPhanSangNhiPhan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ss12_collection_framework/CollectionFramework/CollectionFramework.iml" filepath="$PROJECT_DIR$/ss12_collection_framework/CollectionFramework/CollectionFramework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ss11_DSA_stack_queue/bai_tap/DaoNGuocPhanTu/DaoNGuocPhanTu.iml" filepath="$PROJECT_DIR$/ss11_DSA_stack_queue/bai_tap/DaoNGuocPhanTu/DaoNGuocPhanTu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ss11_DSA_stack_queue/bai_tap/DemSoLanXuatHienCuaTuTrongChuoi/DemSoLanXuatHienCuaTuTrongChuoi.iml" filepath="$PROJECT_DIR$/ss11_DSA_stack_queue/bai_tap/DemSoLanXuatHienCuaTuTrongChuoi/DemSoLanXuatHienCuaTuTrongChuoi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ss11_DSA_stack_queue/bai_tap/KiemTraChuoiPalinderom/KiemTraChuoiPalinderom.iml" filepath="$PROJECT_DIR$/ss11_DSA_stack_queue/bai_tap/KiemTraChuoiPalinderom/KiemTraChuoiPalinderom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ss11_DSA_stack_queue/thuc_hanh/MyGenericStack/MyGenericStack.iml" filepath="$PROJECT_DIR$/ss11_DSA_stack_queue/thuc_hanh/MyGenericStack/MyGenericStack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ss11_DSA_stack_queue/thuc_hanh/MyLinkedListQueue/MyLinkedListQueue.iml" filepath="$PROJECT_DIR$/ss11_DSA_stack_queue/thuc_hanh/MyLinkedListQueue/MyLinkedListQueue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/module_2.iml" filepath="$PROJECT_DIR$/module_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ss10_DSAList/ss10_DSAList.iml" filepath="$PROJECT_DIR$/ss10_DSAList/ss10_DSAList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ss12_collection_framework/ss13_search_alogithms/ss13_search_alogithms.iml" filepath="$PROJECT_DIR$/ss12_collection_framework/ss13_search_alogithms/ss13_search_alogithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ss4_lop_va_doi_tuong_trong_java/ss4_lop_va_doi_tuong_trong_java.iml" filepath="$PROJECT_DIR$/ss4_lop_va_doi_tuong_trong_java/ss4_lop_va_doi_tuong_trong_java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ss5_access_modifier_static_method_static_property/ss5_access_modifier_static_method_static_property.iml" filepath="$PROJECT_DIR$/ss5_access_modifier_static_method_static_property/ss5_access_modifier_static_method_static_property.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ss6_inheritance/ss6_inheritance.iml" filepath="$PROJECT_DIR$/ss6_inheritance/ss6_inheritance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ss7_abstract class_interface/ss7_abstract class_interface.iml" filepath="$PROJECT_DIR$/ss7_abstract class_interface/ss7_abstract class_interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ss9_clean_code_refactoring/ss9_clean_code_refactoring.iml" filepath="$PROJECT_DIR$/ss9_clean_code_refactoring/ss9_clean_code_refactoring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/untitled/untitled.iml" filepath="$PROJECT_DIR$/untitled/untitled.iml" />
+    </modules>
+  </component>
+</project>
