@@ -1,4 +1,6 @@
-package bai_tap.luyen_tap_arrayList_LinkeList;
+package bai_tap.luyen_tap_linkeList;
+
+import bai_tap.luyen_tap_linkeList.ProductManager;
 
 import java.util.Collections;
 import java.util.Scanner;

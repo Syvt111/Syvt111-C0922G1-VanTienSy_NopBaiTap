@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3c22801-7934-4c7d-98dd-40d53f625ce9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CollectionFramework/src/thuc_hanh/HashMap_LinkeHashMap_TreeMap/TestMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CollectionFramework/src/thuc_hanh/phan_biet_HashMap_HashSet/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CollectionFramework/src/thuc_hanh/phan_biet_HashMap_HashSet/TestHashMapHashSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CollectionFramework/src/thuc_hanh/sap_xep_comporable_comparator/AgeComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CollectionFramework/src/thuc_hanh/sap_xep_comporable_comparator/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CollectionFramework/src/thuc_hanh/sap_xep_comporable_comparator/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss7_abstract class_interface/ss7_abstract class_interface.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss7_abstract class_interface/ss7_abstract class_interface.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2_note.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../module2_note.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CollectionFramework/src/out/production/bai_tap/bai_tap/luyen_tap_arrayList_LinkeList/TestArrayList.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +34,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Codegym/C0922G1-VanTienSy/module_2/ss12_collection_framework/CollectionFramework/src"
+    "last_opened_file_path": "D:/Codegym/C0922G1-VanTienSy/module_2/ss12_collection_framework/CollectionFramework"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -63,6 +57,7 @@
       <workItem from="1669109966860" duration="28000" />
       <workItem from="1669110425946" duration="120000" />
       <workItem from="1669110556485" duration="97000" />
+      <workItem from="1669174302874" duration="17000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,4 @@
-package bai_tap.luyen_tap_arrayList_LinkeList;
+package bai_tap.luyen_tap_linkeList;
 
 public class Product {
     private  String  name ;
