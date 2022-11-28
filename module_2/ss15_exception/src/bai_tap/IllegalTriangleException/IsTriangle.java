@@ -21,7 +21,7 @@ public class IsTriangle {
     public static void checkSideTriangle(double a, double b, double c) throws IllegalTriangleException {
         if (a + b < c || a + c < b || b + c < a || (a <= 0 && b <= 0 && c <= 0)) {
             throw new IllegalTriangleException();
-        } else System.out.println(" a ,b ,c are 3 sides of the triangle ");
+        } else System.out.println("a ,b ,c are 3 sides of the triangle ");
     }
 
 
