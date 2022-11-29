@@ -38,63 +38,64 @@ public class ProductManager {
     }
 
 
+    public static String inputNote() {
+        System.out.println("Enter more description of product ");
+        Scanner input = new Scanner(System.in);
+        return input.nextLine();
+    }
+//        static List<Product> products = new ArrayList<>();
 
-
-        public static String inputNote () {
-            System.out.println("Enter more description of product ");
-            Scanner input = new Scanner(System.in);
-            return input.nextLine();
-        }
-        static List<Product> products = new ArrayList<>();
-
-        public static void showAllProduct (List < Product > products) {
-            System.out.println("Show all products ");
-            for (Product pr : products
-            ) {
-                System.out.println(pr);
-            }
-        }
-
-        public static void searchProduct (List < Product > products) {
-            System.out.println("Enter code of product to search ");
-            String code = inputCode();
-            int count = 0;
-            for (int i = 0; i < products.size(); i++) {
-                if (products.get(i).getCode().equals(code)) {
-                    System.out.println("The product with code = " + code);
-                    System.out.println(products.get(i));
-                } else {
-                    count++;
-                }
-                if (count == products.size()) {
-                    System.out.println("Not found");
-                }
-
-            }
-        }
-        public static void writeProductToFile (String path, List < Product > products){
-            try {
-                FileOutputStream fileOutputStream = new FileOutputStream(path);
-                ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-                objectOutputStream.writeObject(products);
-                fileOutputStream.close();
-                objectOutputStream.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        public static List<Product> readProductFromFile (String path){
-            List<Product> products = new ArrayList<>();
-            try {
-                FileInputStream fileInputStream = new FileInputStream(path);
-                ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-                products = (List<Product>) objectInputStream.readObject();
-                fileInputStream.close();
-                objectInputStream.close();
-            } catch (Exception ex) {
-                ex.printStackTrace();
-            }
-            return products;
+    public static void showAllProduct(List<Product> products) {
+        System.out.println("Show all products ");
+        for (Product pr : products
+        ) {
+            System.out.println(pr);
         }
     }
+
+    public static void searchProduct(List<Product> products) {
+        System.out.println("Enter code of product to search ");
+        String code = inputCode();
+        int count = 0;
+        for (int i = 0; i < products.size(); i++) {
+            if (products.get(i).getCode().equals(code)) {
+                System.out.println("The product with code = " + code);
+                System.out.println(products.get(i));
+            } else {
+                count++;
+            }
+            if (count == products.size()) {
+                System.out.println("Not found");
+            }
+
+        }
+    }
+
+    public static void writeProductToFile(String path, List<Product> products) {
+        try {
+            FileOutputStream fileOutputStream = new FileOutputStream(path);
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+            objectOutputStream.writeObject(products);
+            fileOutputStream.close();
+            objectOutputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+    }
+
+    public static List<Product> readProductFromFile(String path) {
+        List<Product> products = new ArrayList<>();
+        try {
+            FileInputStream fileInputStream = new FileInputStream(path);
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+            products = (List<Product>) objectInputStream.readObject();
+            fileInputStream.close();
+            objectInputStream.close();
+        } catch (Exception ex) {
+            System.out.println("Product is empty, please add product !");
+        }
+        return products;
+    }
+}
 

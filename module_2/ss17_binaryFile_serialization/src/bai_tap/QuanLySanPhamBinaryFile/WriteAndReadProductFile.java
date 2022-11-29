@@ -14,9 +14,9 @@ public class WriteAndReadProductFile {
         int choise = -1;
         while (true) {
             while (choise != 0) {
-                List<Product> products = new ArrayList<>();
-                String path = "D:\\Codegym\\C0922G1-VanTienSy\\module_2\\ss17_binaryFile_serialization\\src\\bai_tap\\QuanLySanPhamBinaryFile\\Products.txt";
-                List<Product> productsFromFile = ProductManager.readProductFromFile(path);
+                String path = "D:\\Codegym\\C0922G1-VanTienSy\\module_2\\ss17_binaryFile_serialization\\" +
+                        "src\\bai_tap\\QuanLySanPhamBinaryFile\\Products.txt";
+                List<Product> products = ProductManager.readProductFromFile(path);
                 System.out.println("0. Exit  1. Add product   2. Show all products   3. Search product by code");
                 System.out.println("Please press number : ");
                 choise = Integer.parseInt(scanner.nextLine());
@@ -36,10 +36,11 @@ public class WriteAndReadProductFile {
                         ProductManager.writeProductToFile(path,products);
                         break;
                     case 2:
-                        ProductManager.showAllProduct(productsFromFile);
+
+                        ProductManager.showAllProduct(products);
                         break;
                     case 3:
-                        ProductManager.searchProduct(productsFromFile);
+                        ProductManager.searchProduct(products);
                         break;
                     default:
                         System.out.println("No choise");
@@ -47,6 +48,7 @@ public class WriteAndReadProductFile {
             }
             return;
         }
+
     }
 
 }
