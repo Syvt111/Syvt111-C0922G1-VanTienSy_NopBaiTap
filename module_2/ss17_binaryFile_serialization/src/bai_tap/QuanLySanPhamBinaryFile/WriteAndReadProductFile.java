@@ -15,7 +15,7 @@ public class WriteAndReadProductFile {
         while (true) {
             while (choise != 0) {
                 String path = "D:\\Codegym\\C0922G1-VanTienSy\\module_2\\ss17_binaryFile_serialization\\" +
-                        "src\\bai_tap\\QuanLySanPhamBinaryFile\\Products.txt";
+                        "src\\bai_tap\\QuanLySanPhamBinaryFile\\Products.csv";
                 List<Product> products = ProductManager.readProductFromFile(path);
                 System.out.println("0. Exit  1. Add product   2. Show all products   3. Search product by code");
                 System.out.println("Please press number : ");
