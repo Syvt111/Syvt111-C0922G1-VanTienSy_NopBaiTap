@@ -37,41 +37,45 @@ public class FacilityServiceImpl implements IFacilityService {
                     System.out.println("Enter numbers of villa ");
                     int numberVilla = Integer.parseInt(input.nextLine());
                     for (int i = 1; i <= numberVilla; i++) {
-                        String codeService = null;
+
+                        String codeService ;
                         do {
                             try {
                                 System.out.println("Enter code service  ");
                                 codeService = input.nextLine();
-                                InvalidRegexException.checkServiceCode(codeService);
+                                InvalidRegexException.checkVillaServiceCode(codeService);
                                 break;
+
                             } catch (InvalidRegexException e) {
                                 System.err.println(e.getMessage());
-                                break;
                             }
                         } while (true);
 
-                        String serviceName = null;
+                        String serviceName ;
                         do {
                             try {
                                 System.out.println("Enter service name ");
                                 serviceName = input.nextLine();
                                 InvalidRegexException.checkServiceName(serviceName);
+                                break;
+
                             } catch (InvalidRegexException e) {
                                 System.err.println(e.getMessage());
-                                break;
+
                             }
 
                         } while (true);
 
-                        int useArea = 0;
+                        int useArea ;
                         do {
                             try {
                                 System.out.println("Enter use area ");
                                 useArea = Integer.parseInt(input.nextLine());
                                 InvalidRegexException.checkUseArea(String.valueOf(useArea));
-                            } catch (InvalidRegexException e) {
-                                e.getMessage();
                                 break;
+
+                            } catch (InvalidRegexException e) {
+                                System.err.println(e.getMessage());
                             }
 
                         } while (true);
@@ -79,23 +83,23 @@ public class FacilityServiceImpl implements IFacilityService {
 
                         System.out.println("Enter price ");
                         int price = Integer.parseInt(input.nextLine());
-                        if (!RegexTest.validPrice(String.valueOf(price))) {
-                            System.out.println("Incorrect format, please enter again !");
+                        if (RegexTest.validPrice(String.valueOf(price))) {
+                            System.err.println("Incorrect format, please enter again !");
                             price = Integer.parseInt(input.nextLine());
                         }
                         System.out.println("Enter the maximum number of people ");
                         int maxPeople = Integer.parseInt(input.nextLine());
                         if (!RegexTest.validMaxPeople(String.valueOf(maxPeople))) {
-                            System.out.println("Incorrect format, please enter again !");
+                            System.err.println("Incorrect format, please enter again !");
                             maxPeople = Integer.parseInt(input.nextLine());
                         }
                         System.out.println("Enter type of rent ");
                         String rentType = input.nextLine();
                         if (!RegexTest.validServiceTypeStandardName(rentType)) {
-                            System.out.println("Incorrect format, please enter again !");
+                            System.err.println("Incorrect format, please enter again !");
                             rentType = input.nextLine();
                         }
-                        System.out.println("Enter room standard");
+                        System.err.println("Enter room standard");
                         String roomStandard = input.nextLine();
                         if (!RegexTest.validServiceTypeStandardName(roomStandard)) {
                             System.out.println("Incorrect format, please enter again !");
@@ -123,45 +127,44 @@ public class FacilityServiceImpl implements IFacilityService {
                     System.out.println("Enter numbers of room ");
                     int numberRoom = Integer.parseInt(input.next());
                     for (int j = 1; j <= numberRoom; j++) {
-                        String codeService;
+                        String codeService ;
                         do {
                             try {
                                 System.out.println("Enter codeService name ");
                                 codeService = input.nextLine();
-                                InvalidRegexException.checkServiceCode(codeService);
+                                InvalidRegexException.checkRoomServiceCode(codeService);
                                 break;
                             } catch (InvalidRegexException e) {
                                 System.err.println(e.getMessage());
                             }
                         } while (true);
 
-                        String serviceName = null;
+                        String serviceName ;
                         do {
                             try {
                                 System.out.println("Enter service name ");
                                 serviceName = input.nextLine();
                                 InvalidRegexException.checkServiceName(serviceName);
+                                break;
                             } catch (InvalidRegexException e) {
                                 System.err.println(e.getMessage());
-                                break;
                             }
 
 
                         } while (true);
 
-                        int useArea = 0;
+                        int useArea ;
                         do {
                             try {
                                 System.out.println("Enter use area ");
                                 useArea = Integer.parseInt(input.nextLine());
                                 InvalidRegexException.checkUseArea(String.valueOf(useArea));
-                            } catch (InvalidRegexException e) {
-                                e.getMessage();
                                 break;
+                            } catch (InvalidRegexException e) {
+                                System.err.println(e.getMessage());
                             }
 
                         } while (true);
-
 
                         System.out.println("Enter price ");
                         int price = Integer.parseInt(input.nextLine());

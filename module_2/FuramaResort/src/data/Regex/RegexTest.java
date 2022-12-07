@@ -25,16 +25,16 @@ public class RegexTest {
 
     }
     public static boolean validServiceTypeStandardName(String regex){
-       final String SERVICE_NAME = "^[A-Z][a-z_0-9]";
-       pattern = Pattern.compile(SERVICE_NAME);
-       matcher = pattern.matcher(regex);
-       return matcher.matches();
+       final String SERVICE_NAME = "^[A-Z][a-z]+";
+       Pattern newPattern = Pattern.compile(SERVICE_NAME);
+       Matcher newMatcher = newPattern.matcher(regex);
+       return newMatcher.matches();
 
     }
     public static boolean validPrice(String regex){
         pattern = Pattern.compile("[1-9]+[0-9]");
         matcher =pattern.matcher(regex);
-        return matcher.matches();
+        return !matcher.matches();
     }
     public static boolean validMaxPeople(String regex){
         pattern = Pattern.compile("^([1-9]|1[0-9])$|(^[0-1][0-9]$)");
