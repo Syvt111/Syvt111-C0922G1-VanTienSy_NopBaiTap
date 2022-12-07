@@ -1,13 +1,15 @@
 package services;
 
 import controllers.FuramaController;
+import data.Exception.InvalidRegexException;
+import data.Regex.RegexTest;
 import models.Room;
 import models.Villa;
 
 import java.util.LinkedHashMap;
 import java.util.Scanner;
 
-public class FacilityServiceImpl implements FacilityService {
+public class FacilityServiceImpl implements IFacilityService {
     Scanner input = new Scanner(System.in);
 
     @Override
@@ -35,23 +37,83 @@ public class FacilityServiceImpl implements FacilityService {
                     System.out.println("Enter numbers of villa ");
                     int numberVilla = Integer.parseInt(input.nextLine());
                     for (int i = 1; i <= numberVilla; i++) {
-                        System.out.println("Enter service name ");
-                        String serviceName = input.nextLine();
-                        System.out.println("Enter use area ");
-                        int useArea = Integer.parseInt(input.nextLine());
+                        String codeService = null;
+                        do {
+                            try {
+                                System.out.println("Enter code service  ");
+                                codeService = input.nextLine();
+                                InvalidRegexException.checkServiceCode(codeService);
+                                break;
+                            } catch (InvalidRegexException e) {
+                                System.err.println(e.getMessage());
+                                break;
+                            }
+                        } while (true);
+
+                        String serviceName = null;
+                        do {
+                            try {
+                                System.out.println("Enter service name ");
+                                serviceName = input.nextLine();
+                                InvalidRegexException.checkServiceName(serviceName);
+                            } catch (InvalidRegexException e) {
+                                System.err.println(e.getMessage());
+                                break;
+                            }
+
+                        } while (true);
+
+                        int useArea = 0;
+                        do {
+                            try {
+                                System.out.println("Enter use area ");
+                                useArea = Integer.parseInt(input.nextLine());
+                                InvalidRegexException.checkUseArea(String.valueOf(useArea));
+                            } catch (InvalidRegexException e) {
+                                e.getMessage();
+                                break;
+                            }
+
+                        } while (true);
+
+
                         System.out.println("Enter price ");
                         int price = Integer.parseInt(input.nextLine());
+                        if (!RegexTest.validPrice(String.valueOf(price))) {
+                            System.out.println("Incorrect format, please enter again !");
+                            price = Integer.parseInt(input.nextLine());
+                        }
                         System.out.println("Enter the maximum number of people ");
                         int maxPeople = Integer.parseInt(input.nextLine());
+                        if (!RegexTest.validMaxPeople(String.valueOf(maxPeople))) {
+                            System.out.println("Incorrect format, please enter again !");
+                            maxPeople = Integer.parseInt(input.nextLine());
+                        }
                         System.out.println("Enter type of rent ");
                         String rentType = input.nextLine();
+                        if (!RegexTest.validServiceTypeStandardName(rentType)) {
+                            System.out.println("Incorrect format, please enter again !");
+                            rentType = input.nextLine();
+                        }
                         System.out.println("Enter room standard");
                         String roomStandard = input.nextLine();
+                        if (!RegexTest.validServiceTypeStandardName(roomStandard)) {
+                            System.out.println("Incorrect format, please enter again !");
+                            roomStandard = input.nextLine();
+                        }
                         System.out.println("Enter poof of area ");
                         int poolArea = Integer.parseInt(input.nextLine());
+                        if (!RegexTest.validUseArea_Pool(String.valueOf(poolArea))) {
+                            System.out.println("Incorrect format, please enter again !");
+                            poolArea = Integer.parseInt(input.nextLine());
+                        }
                         System.out.println("Enter numbers of floors ");
                         int numberFloors = Integer.parseInt(input.nextLine());
-                        Villa villas = new Villa(serviceName, useArea, price, maxPeople, rentType, roomStandard, poolArea, numberFloors);
+                        if (!RegexTest.validNumbersOfFloor(String.valueOf(numberFloors))) {
+                            System.out.println("Incorrect format, please enter again !");
+                            numberFloors = Integer.parseInt(input.nextLine());
+                        }
+                        Villa villas = new Villa(codeService, serviceName, useArea, price, maxPeople, rentType, roomStandard, poolArea, numberFloors);
                         System.out.println("Enter number of times used");
                         int numberOfTimesOfVilla = Integer.parseInt(input.nextLine());
                         villaList.put(villas, numberOfTimesOfVilla);
@@ -61,19 +123,68 @@ public class FacilityServiceImpl implements FacilityService {
                     System.out.println("Enter numbers of room ");
                     int numberRoom = Integer.parseInt(input.next());
                     for (int j = 1; j <= numberRoom; j++) {
-                        System.out.println("Enter service name ");
-                        String serviceName = input.nextLine();
-                        System.out.println("Enter use area ");
-                        int useArea = Integer.parseInt(input.next());
+                        String codeService;
+                        do {
+                            try {
+                                System.out.println("Enter codeService name ");
+                                codeService = input.nextLine();
+                                InvalidRegexException.checkServiceCode(codeService);
+                                break;
+                            } catch (InvalidRegexException e) {
+                                System.err.println(e.getMessage());
+                            }
+                        } while (true);
+
+                        String serviceName = null;
+                        do {
+                            try {
+                                System.out.println("Enter service name ");
+                                serviceName = input.nextLine();
+                                InvalidRegexException.checkServiceName(serviceName);
+                            } catch (InvalidRegexException e) {
+                                System.err.println(e.getMessage());
+                                break;
+                            }
+
+
+                        } while (true);
+
+                        int useArea = 0;
+                        do {
+                            try {
+                                System.out.println("Enter use area ");
+                                useArea = Integer.parseInt(input.nextLine());
+                                InvalidRegexException.checkUseArea(String.valueOf(useArea));
+                            } catch (InvalidRegexException e) {
+                                e.getMessage();
+                                break;
+                            }
+
+                        } while (true);
+
+
                         System.out.println("Enter price ");
                         int price = Integer.parseInt(input.nextLine());
+                        if (!RegexTest.validPrice(String.valueOf(price))) {
+                            System.out.println("Incorrect format, please enter again !");
+                            price = Integer.parseInt(input.nextLine());
+                        }
                         System.out.println("Enter the maximum number of people ");
                         int maxPeople = Integer.parseInt(input.nextLine());
+                        if (!RegexTest.validMaxPeople(String.valueOf(maxPeople))) {
+                            System.out.println("Incorrect format, please enter again !");
+                            maxPeople = Integer.parseInt(input.nextLine());
+                        }
                         System.out.println("Enter type of rent ");
                         String rentType = input.nextLine();
+                        if (!RegexTest.validServiceTypeStandardName(rentType)) {
+                            System.out.println("Incorrect format, please enter again !");
+                            rentType = input.nextLine();
+                        }
                         System.out.println("Enter free service include ");
                         String freeServiceInclude = input.nextLine();
-                        Room rooms = new Room(serviceName, useArea, price, maxPeople, rentType, freeServiceInclude);
+
+                        Room rooms = new Room(codeService, serviceName, useArea, price, maxPeople, rentType, freeServiceInclude);
                         System.out.println("Enter number of times used");
                         int numberOfTimesOfRoom = Integer.parseInt(input.nextLine());
                         roomList.put(rooms, numberOfTimesOfRoom);
@@ -81,7 +192,7 @@ public class FacilityServiceImpl implements FacilityService {
                     break;
                 case 3:
                     do {
-                        System.out.println( "1\tDisplay list facility\n" +
+                        System.out.println("1\tDisplay list facility\n" +
                                 "2\tAdd new facility\n" +
                                 "3\tDisplay list facility maintenance\n" +
                                 "4\tReturn main menu\n");
@@ -91,7 +202,7 @@ public class FacilityServiceImpl implements FacilityService {
                             case 1:
                                 displayListFacility(villaList, roomList);
                             case 2:
-                               addNewFacility(villaList, roomList);
+                                addNewFacility(villaList, roomList);
                             case 3:
                                 displayListFacilityMaintenance(villaList, roomList);
                             case 4:
@@ -117,9 +228,11 @@ public class FacilityServiceImpl implements FacilityService {
             System.out.println(key + " " + " Number of times used " + roomList.get(key));
         }
     }
+
     @Override
     public void returnMainMenu(LinkedHashMap<Villa, Integer> vilaList, LinkedHashMap<Room, Integer> roomList) {
         FuramaController.displayMaiMenu();
     }
+
 }
 

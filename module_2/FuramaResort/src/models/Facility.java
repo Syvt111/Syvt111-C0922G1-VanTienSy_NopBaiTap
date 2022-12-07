@@ -1,18 +1,25 @@
 package models;
 
 public abstract class Facility {
-public String serviceName ;
-public int useArea ;
-public int price ;
-public int maxPeople ;
-public String rentType ;
 
-    public Facility(String serviceName, int useArea, int price, int maxPeople, String rentType) {
+    public String codeService;
+    public String serviceName;
+    public int useArea;
+    public int price;
+    public int maxPeople;
+    public String rentType;
+
+    protected Facility(String codeService, String serviceName, int useArea, int price, int maxPeople, String rentType) {
+        this.codeService = codeService;
         this.serviceName = serviceName;
         this.useArea = useArea;
         this.price = price;
         this.maxPeople = maxPeople;
         this.rentType = rentType;
+    }
+
+    public String getCodeService() {
+        return codeService;
     }
 
     public String getServiceName() {
@@ -33,6 +40,11 @@ public String rentType ;
 
     public String getRentType() {
         return rentType;
+    }
+
+    public void setCodeService(String codeService) {
+        this.codeService = codeService;
+
     }
 
     public void setServiceName(String serviceName) {
@@ -57,7 +69,7 @@ public String rentType ;
 
     @Override
     public String toString() {
-        return "Facility{" +
+        return "Facility{" + "codeService= " + codeService +
                 "serviceName='" + serviceName + '\'' +
                 ", useArea=" + useArea +
                 ", price=" + price +

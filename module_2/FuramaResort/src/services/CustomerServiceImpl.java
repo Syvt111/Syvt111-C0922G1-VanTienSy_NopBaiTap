@@ -6,7 +6,7 @@ import models.Customer;
 import java.util.LinkedList;
 import java.util.Scanner;
 
-public class CustomerServiceImpl implements CustomerService{
+public class CustomerServiceImpl implements ICustomerService {
     Scanner input = new Scanner(System.in);
 
     @Override

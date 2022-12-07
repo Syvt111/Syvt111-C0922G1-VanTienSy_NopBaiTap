@@ -28,13 +28,13 @@ public class Customer extends Person{
 
     @Override
     public String toString() {
-        return "Customer{" +", id=" + id +
-                ", name='" + name + '\'' +
-                ", birthDate='" + birthDate + '\'' +
-                ", gender='" + gender + '\'' +
-                ", cmndNumber='" + cmndNumber + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", Email='" + Email + '\'' +
+        return "Customer{" +", id=" + super.getId() +
+                ", name='" + this.getName() + '\'' +
+                ", birthDate='" +super.getBirthDate() + '\'' +
+                ", gender='" + super.getGender() + '\'' +
+                ", cmndNumber='" + super.getGender() + '\'' +
+                ", phoneNumber='" + super.getCmndNumber() + '\'' +
+                ", Email='" + super.getEmail() + '\'' +
                 "customerType='" + customerType + '\'' +
                 ", address='" + address + '\'' +
                 '}';

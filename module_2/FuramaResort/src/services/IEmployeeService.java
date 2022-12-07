@@ -4,7 +4,7 @@ import models.Employee;
 
 import java.util.List;
 
-public interface EmployeeService extends Service{
+public interface IEmployeeService extends IService<Employee> {
     void displayListEmployee(List<Employee> employee);
     void addNewEmployee(List<Employee> employees);
     void deleteEmployee(List<Employee> employeeList);

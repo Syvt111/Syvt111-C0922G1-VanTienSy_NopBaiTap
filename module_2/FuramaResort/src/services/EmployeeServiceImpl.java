@@ -6,7 +6,7 @@ import models.Employee;
 import java.util.List;
 import java.util.Scanner;
 
-public class EmployeeServiceImpl implements EmployeeService{
+public class EmployeeServiceImpl implements IEmployeeService {
     static Scanner input = new Scanner(System.in);
 
     @Override
@@ -81,4 +81,5 @@ public class EmployeeServiceImpl implements EmployeeService{
         FuramaController.displayMaiMenu();
 
     }
+
 }

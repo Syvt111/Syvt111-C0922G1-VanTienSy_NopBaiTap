@@ -3,13 +3,13 @@ package models;
 import java.security.PublicKey;
 
 public abstract class Person {
-    public int id ;
-    public String name ;
-    public String birthDate ;
-    public String gender ;
-    public String cmndNumber ;
-    public String phoneNumber ;
-    public String Email ;
+    private int id ;
+    private String name ;
+    private String birthDate ;
+    private String gender ;
+    private String cmndNumber ;
+    private String phoneNumber ;
+    private String Email ;
     public Person(int id, String name,
                   String birthDate, String gender,
                   String cmndNumber, String phoneNumber, String email) {

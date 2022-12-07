@@ -5,7 +5,7 @@ import models.Villa;
 
 import java.util.LinkedHashMap;
 
-public interface FacilityService extends Service {
+public interface IFacilityService extends IService {
     void displayListFacility(LinkedHashMap<Villa,Integer> vilaList,LinkedHashMap<Room,Integer> roomList);
 
     void addNewFacility(LinkedHashMap<Villa,Integer> vilaList,LinkedHashMap<Room,Integer> roomList);

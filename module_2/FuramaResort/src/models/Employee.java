@@ -38,12 +38,12 @@ public class Employee extends Person{
 
     @Override
     public String toString() {
-        return "Employee{" +", id=" + id + ", name = " + name +
-                ", birthDate='" + birthDate + '\'' +
-                ", gender='" + gender + '\'' +
-                ", cmndNumber='" + cmndNumber + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", Email='" + Email + '\'' +
+        return "Employee{" +", id=" + super.getId() + ", name = " + super.getName() +
+                ", birthDate='" + super.getBirthDate() + '\'' +
+                ", gender='" + super.getGender() + '\'' +
+                ", cmndNumber='" + super.getCmndNumber() + '\'' +
+                ", phoneNumber='" + super.getPhoneNumber() + '\'' +
+                ", Email='" + super.getEmail() + '\'' +
                 "level='" + level + '\'' +
                 ", position='" + position + '\'' +
                 ", salary=" + salary +

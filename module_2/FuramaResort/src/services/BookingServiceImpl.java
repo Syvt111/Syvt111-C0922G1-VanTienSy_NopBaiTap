@@ -1,5 +1,5 @@
 package services;
 
-public class BookingServiceImpl implements BookingService{
+public class BookingServiceImpl implements IBookingService {
 
 }
