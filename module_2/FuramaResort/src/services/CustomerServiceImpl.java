@@ -8,13 +8,12 @@ import java.util.Scanner;
 
 public class CustomerServiceImpl implements ICustomerService {
     Scanner input = new Scanner(System.in);
+    WriteFileCustomer writeFileCustomer = new WriteFileCustomer();
+    ReadFileCustomer readFileCustomer = new ReadFileCustomer();
 
     @Override
-    public void displayListCustomers(LinkedList<Customer> customers) {
-        for (Customer customer:customers
-             ) {
-            System.out.println(customer);
-        }
+    public void displayListCustomers() {
+        System.out.println(readFileCustomer.read());
     }
     @Override
     public void addNewCustomers(LinkedList<Customer> customers) {
@@ -42,10 +41,12 @@ public class CustomerServiceImpl implements ICustomerService {
             String address  = input.nextLine();
             Customer customer = new Customer(id,name,birthday,gender,cmnd,phoneNumber,email,customerType,address);
             customers.add(customer);
+            writeFileCustomer.write(customers);
         }
     }
     @Override
-    public void editCustomers(LinkedList<Customer> customers) {
+    public void editCustomers() {
+        LinkedList<Customer> customers = readFileCustomer.read();
         System.out.println("Enter id of customer ");
         int id = Integer.parseInt(input.nextLine());
         for (int i = 1; i <= customers.size(); i ++){
@@ -66,11 +67,13 @@ public class CustomerServiceImpl implements ICustomerService {
                 customers.get(i).setCustomerType(input.nextLine());
                 System.out.println("Input new address :");
                 customers.get(i).setAddress(input.nextLine());
+                break;
             }
         }
+        writeFileCustomer.write(customers);
     }
     @Override
-    public void returnMainMenu(LinkedList<Customer> customers) {
+    public void returnMainMenu() {
         FuramaController.displayMaiMenu();
     }
 }

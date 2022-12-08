@@ -5,7 +5,7 @@ public class Employee extends Person{
     private String position ;
     private int salary ;
 
-    public Employee(int id, String name, String birthDate, String gender, String cmndNumber, String phoneNumber, String email, int salary) {
+    public Employee(int id, String name, String birthDate, String gender, String cmndNumber, String phoneNumber, String email, String level, String position, int salary) {
         super(id, name, birthDate, gender, cmndNumber, phoneNumber, email);
         this.level = level;
         this.position = position;
@@ -48,5 +48,11 @@ public class Employee extends Person{
                 ", position='" + position + '\'' +
                 ", salary=" + salary +
                 '}';
+    }
+    public String formatCsvEmployee(){
+        return super.getId() +"," + super.getName() +","+ super.getBirthDate() +","+ super.getGender() +
+                "," + super.getCmndNumber() +","+super.getPhoneNumber() +","+ super.getEmail() +","+ level +","+ position +
+                ","+ + salary ;
+
     }
 }

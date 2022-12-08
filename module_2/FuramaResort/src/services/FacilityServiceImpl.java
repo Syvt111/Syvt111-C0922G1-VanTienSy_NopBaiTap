@@ -1,8 +1,7 @@
 package services;
 
 import controllers.FuramaController;
-import data.Exception.InvalidRegexException;
-import data.Regex.RegexTest;
+import Exception.InvalidRegexException;
 import models.Room;
 import models.Villa;
 

@@ -42,19 +42,19 @@ public class FuramaController {
                         int option1 = Integer.parseInt(input.nextLine());
                         switch (option1) {
                             case 1:
-                                employeeService.displayListEmployee(employeeList);
+                                employeeService.displayListEmployee();
                                 break;
                             case 2:
                                 employeeService.addNewEmployee(employeeList);
                                 break;
                             case 3:
-                                employeeService.deleteEmployee(employeeList);
+                                employeeService.deleteEmployee();
                                 break;
                             case 4:
-                                employeeService.editEmployee(employeeList);
+                                employeeService.editEmployee();
                                 break;
                             case 5:
-                                employeeService.returnMainMenu(employeeList);
+                                employeeService.returnMainMenu();
                                 break;
                         }
                     } while (true);
@@ -69,13 +69,13 @@ public class FuramaController {
                         int option2 = Integer.parseInt(input.nextLine());
                         switch (option2) {
                             case 1:
-                                customerService.displayListCustomers(customerList);
+                                customerService.displayListCustomers();
                             case 2:
                                 customerService.addNewCustomers(customerList);
                             case 3:
-                                customerService.editCustomers(customerList);
+                                customerService.editCustomers();
                             case 4:
-                                customerService.returnMainMenu(customerList);
+                                customerService.returnMainMenu();
                         }
                     } while (true);
 

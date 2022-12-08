@@ -5,9 +5,9 @@ import models.Employee;
 import java.util.List;
 
 public interface IEmployeeService {
-    void displayListEmployee(List<Employee> employee);
+    void displayListEmployee();
     void addNewEmployee(List<Employee> employees);
-    void deleteEmployee(List<Employee> employeeList);
-    void editEmployee(List<Employee> employeeList);
-    void returnMainMenu(List<Employee> employeeList);
+    void deleteEmployee();
+    void editEmployee();
+    void returnMainMenu();
 }
