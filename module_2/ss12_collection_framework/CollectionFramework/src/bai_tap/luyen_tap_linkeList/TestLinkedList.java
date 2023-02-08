@@ -52,7 +52,7 @@ public class TestLinkedList {
                     case 6:
                         PriceIncreaseComparator priceIncreaseComparator = new PriceIncreaseComparator();
                         System.out.println("Increase to sort by price :");
-                        Collections.sort(ProductManager.linkedList, priceIncreaseComparator);
+                        Collections.sort(ProductManager.linkedList,priceIncreaseComparator);
                         for (Product pr : ProductManager.linkedList
                         ) {
                             System.out.println(pr);

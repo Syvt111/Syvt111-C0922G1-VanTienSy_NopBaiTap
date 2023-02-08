@@ -9,6 +9,8 @@ public class CountWordOccurrence {
         String string = "Sy Sy Van Code Gym";
         TreeMap<String, Integer> map = new TreeMap<>();
         int count = 0;
+        string.split("");
+
         for (int i = 0; i < splitString(string).length; i++) {
             if (map.containsKey(splitString(string)[i])) {
                 count++;
@@ -23,5 +25,17 @@ public class CountWordOccurrence {
 //            Integer value = map.get(key);
 //            System.out.println(key + " : " + value);
 //        }
+        for (String key :map.keySet()){
+            Integer value = map.get(key);
+            System.out.println(key + " : "+ value);
+        }
+        for (String str:splitString(string)
+             ) {
+            System.out.print(str);
+        }
+        for (String key : map.keySet()){
+            Integer value = map.get(key);
+            System.out.println(key + " : "+ value);
+        }
     }
 }

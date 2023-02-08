@@ -19,7 +19,7 @@ public class WriteFileCustomer implements IWrite<Customer> {
             fileWriter = new FileWriter(file);
             bufferedWriter = new BufferedWriter(fileWriter);
             for (Customer customer : customerList) {
-                bufferedWriter.write(customer.toString());
+                bufferedWriter.write(customer.formatCsvCustomer());
                 bufferedWriter.newLine();
             }
 

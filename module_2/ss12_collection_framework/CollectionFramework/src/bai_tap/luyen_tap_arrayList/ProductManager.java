@@ -1,9 +1,10 @@
 package bai_tap.luyen_tap_arrayList;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Scanner;
 
-public class ProductManager {
+public class ProductManager implements Comparator<Product> {
     public static int inputId() {
         System.out.println("Enter id :");
         Scanner input = new Scanner(System.in);
@@ -25,6 +26,7 @@ public class ProductManager {
     static ArrayList<Product> arrayList = new ArrayList<>();
 
     public static void addProduct(Product product) {
+
         arrayList.add(product);
     }
 
@@ -67,5 +69,10 @@ public class ProductManager {
                 System.out.println("Product ís not");
             }
         }
+    }
+
+    @Override
+    public int compare(Product o1, Product o2) {
+        return Integer.compare(o1.getPrice() - o2.getPrice(), 0);
     }
 }

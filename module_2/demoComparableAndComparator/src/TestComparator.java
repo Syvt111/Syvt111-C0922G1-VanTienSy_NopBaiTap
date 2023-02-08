@@ -1,6 +1,6 @@
 
 
-public class Comparator implements java.util.Comparator<Animal> {
+public class TestComparator implements java.util.Comparator<Animal> {
 
     @Override
     public int compare(Animal o1, Animal o2) {

@@ -2,6 +2,7 @@ package bai_tap.luyen_tap_arrayList;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class TestArrayList {
@@ -51,7 +52,7 @@ public class TestArrayList {
                     case 6:
                         PriceIncreaseComparator priceIncreaseComparator = new PriceIncreaseComparator();
                         System.out.println("Increase to sort by price :");
-                        Collections.sort(ProductManager.arrayList, priceIncreaseComparator);
+                        Collections.sort(ProductManager.arrayList,priceIncreaseComparator);
                         for (Product pr : ProductManager.arrayList
                         ) {
                             System.out.println(pr);

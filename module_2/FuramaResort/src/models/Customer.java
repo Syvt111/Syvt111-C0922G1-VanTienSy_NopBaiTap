@@ -39,5 +39,9 @@ public class Customer extends Person{
                 ", address='" + address + '\'' +
                 '}';
     }
+    public String formatCsvCustomer(){
+        return super.getId() +"," + super.getName() +","+ super.getBirthDate() +","+ super.getGender() +
+                "," + super.getCmndNumber() +","+super.getPhoneNumber() +","+ super.getEmail() +","+ customerType +","+ address ;
+    }
 }
 

@@ -9,6 +9,7 @@ public class MyGenericStack<T> {
     }
 
     public void push(T element) {
+
         stack.addFirst(element);
     }
     public T pop(){

@@ -1,14 +1,12 @@
 package services;
-
 import models.Employee;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReadFileEmployee implements IRead{
+public class ReadFileEmployee implements IRead<Employee> {
     @Override
     public List<Employee> read() {
         BufferedReader bufferedReader = null;

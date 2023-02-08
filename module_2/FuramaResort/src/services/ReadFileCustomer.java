@@ -1,14 +1,11 @@
 package services;
 
 import models.Customer;
-import models.Employee;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 public class ReadFileCustomer implements IRead<Customer> {
     @Override
@@ -21,7 +18,8 @@ public class ReadFileCustomer implements IRead<Customer> {
             String line ;
             while ((line = bufferedReader.readLine())!=null){
                 String[] splitData = line.split(",");
-               Customer customer = new Customer(Integer.parseInt(splitData[0]),splitData[1],splitData[3],splitData[4],splitData[5],splitData[6],splitData[7],splitData[8],splitData[9]);
+               Customer customer = new Customer(Integer.parseInt(splitData[0]),splitData[1],splitData[2],splitData[3],
+                       splitData[4],splitData[5],splitData[6],splitData[7],splitData[8]);
                customerList.add(customer);
             }
         } catch (IOException e) {
@@ -37,5 +35,6 @@ public class ReadFileCustomer implements IRead<Customer> {
         }
         return customerList ;
     }
+
 
 }
